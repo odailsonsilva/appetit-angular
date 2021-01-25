@@ -6,8 +6,8 @@
       <p>Nós sabemos a importância de estar sempre de barriga cheia e o quanto isso pode ajudar no seu dia.</p>
     </header>
     <form>
-      <mai-input placeholder="Email"><input type="text" (keyup)="email = $event.target.value"></mai-input>
-      <mai-input placeholder="Senha"><input type="text" (keyup)="senha = $event.target.value"></mai-input>
+      <mai-input placeholder="Email"><input #emailInput type="text" (keyup)="email = emailInput.value"></mai-input>
+      <mai-input placeholder="Senha"><input #senhaInput type="text" (keyup)="senha = senhaInput.value"></mai-input>
       <a href="#">RECUPERAR MINHA SENHA</a>
       <mai-btn label="Entrar" [disabled]="!email || !senha"></mai-btn>
     </form>
