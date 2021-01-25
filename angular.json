@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "appetit-angular"
+  "defaultProject": "appetit-angular",
+  "cli": {
+    "analytics": false
+  }
 }
