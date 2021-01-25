@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  InputComponent  } from 'dls';
 
 @Component({
   selector: 'app-root',
