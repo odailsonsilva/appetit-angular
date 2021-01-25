@@ -1,0 +1,87 @@
+@import 'themes';
+@import 'text-settings';
+@import 'effects';
+@import 'spc';
+@import 'elements';
+@import 'zIndex';
+@import 'grid';
+
+html, body, input, p {
+    @include text-setting('body');
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    color: color('bw', 'black', '56');
+    background-color: color('bw', 'white', 'bg');
+}
+* {
+    box-sizing: border-box;
+    font-family: $font-family !important;
+}
+p {
+    background-color:transparent;
+}
+h1,h2,h3,h4,h5,h6,button {
+    margin: 0;
+}
+h1 {
+    @include text-setting('h1');
+    color: color('bw', 'black', '88');
+}
+h2 {
+    @include text-setting('h2');
+    color: color('bw', 'black', '88');
+}
+h3 {
+    @include text-setting('h3');
+    color: color('bw', 'black', '88');
+    // @include set-font-size(8rem, 8.75rem);
+}
+h4 {
+    @include text-setting('caption');
+    color: color('bw', 'black', '40');
+}
+// MAKE testar se eu passo parametro true detalhando o que é
+button {
+    @include text-setting('button', true);
+    outline: none;
+    border:none;
+    cursor:pointer;
+    padding: 0;
+    white-space: nowrap;
+    user-select: none;
+}
+
+
+// FUNÇÕES/MIXINS E FORMAS DE USO
+
+/*
+MIXINS - SETAM DIRETAMENTE O VALOR DENTRO DO SEU CHAMADO (começam com @include)
+@include text-setting('button') do arquivo text-settings.scss
+    - Define font-size / line-height / font-weight / uppercase de acordo com fontes padrão
+@include set-font-size(2rem, 3rem) do arquivo text-settings.scss
+    - Passa 2 parametros em rem, font-size e line-height
+    - O segundo parametro é opcional
+@include set-effect('shadow', 'dark')
+    - Tem 2 parâmetros
+    - O primeiro parametro é o tipo de efeito a ser colocado (shadow, radius) o segundo é a sua variante
+    - Tem o seu segundo parametro opcional
+@include set-icon-color($theme, 'primary', 'base')
+    - Tem o objetivo de alterar a cor de um mai-svg-icon
+    - Os parametros são: tema, chave, variante da cor
+    - Sem passar parametro, é buscado a cor da variavel $theme, primary, base
+@include set-zIndex()
+    - Recebe 1 parâmetro, o nome dado aquele zIndex
+    - No arquivo zIndex.scss é possível ter uma noção geral dos index do projeto
+
+FUNÇÕES - RETORNAM O VALOR PARA SEREM ATRIBUIDOS A ALGUMA CARACTERÍSTICA (são valores de um css)
+color: color() ou background-color: color($theme);
+    - Função que retorna um valor de cor, parametros são opcionais
+    - Os parametros são: tema, chave, variante da cor
+    - Sem passar parametro, é buscado a cor da variavel $theme, primary, base
+margin-left: spc('sxlarge');
+    - Função que retorna um valor de um tamanho, parametro opcional
+    - Parâmetro: Texto que representar space
+    - Sem passar parametro, é buscado o spc default
+*/

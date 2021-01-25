@@ -1,0 +1,107 @@
+@import 'theme.scss';
+
+$theme-colors: (
+    'maida': (
+        'primary': (
+            'light': #0066EE,
+            'default': #0050E5,
+            'dark': #0044CC,
+            'opacity': rgba(0, 80, 229, 0.04),
+            '40': rgba(0, 80, 229, 0.4)
+        ),
+        'secondary': (
+            'light': #66AAFF,
+            'default': #4499FF,
+            'dark': #4488DD
+        )
+    ),
+    'infoway': (
+        'primary': (
+            'light': #009AEB,
+            'default': #008ad2,
+            'dark': #0079B8,
+            'opacity': rgba(0, 138, 210, 0.04),
+            '40': rgba(0, 138, 210, 0.4)
+        ),
+        'secondary': (
+            'light': #40CF54,
+            'default': #38B449,
+            'dark': #309C3F
+        )
+    ),
+    'octopus': (
+        'primary': (
+            'light': #34BBC4,
+            'default': #2DA2AA,
+            'dark': #268B91,
+            'opacity': rgba(45, 162, 170, 0.04),
+            '40': rgba(45, 162, 170, 0.4)
+        ),
+        'secondary': (
+            'light': #00446B,
+            'default': #002439,
+            'dark': #00101A
+        )
+    ),
+    'appetit': (
+        'primary': (
+            'light': #FEAC66,
+            'default': #FF8822,
+            'dark': #E5832E,
+            'opacity': rgba(255, 136, 34, 0.04),
+            '40': rgba(255, 136, 34, 0.4)
+        ),
+        'secondary': (
+            'light': #CFE542,
+            'default': #B8CC3B,
+            'dark': #A1B234
+        )
+    ),
+    'alert': (
+        'info': (
+            'light': #009AEB,
+            'default': #008AD2,
+            'dark': #0079B8,
+            'opacity': rgba(0, 138, 210, 0.04)
+        ),
+        'success': (
+            'light': #40CF54,
+            'default': #38B449,
+            'dark': #309C3F,
+            'opacity': rgba(56, 180, 73, 0.04)
+        ),
+        'warning': (
+            'light': #FFC61A,
+            'default': #FFB300,
+            'dark': #E5A100,
+            'opacity': rgba(255,179,0, 0.04)
+        ),
+        'danger': (
+            'light': #FF584C,
+            'default': #F44336,
+            'dark': #DB3C31,
+            'opacity': rgba(244, 67, 54, 0.04)
+        )
+    ),
+    'bw': (
+        'black': (
+            '100': rgba(0, 0, 0),
+            '88': rgba(0, 0, 0, 0.88),
+            '56': rgba(0, 0, 0, 0.56),
+            '40': rgba(0, 0, 0, 0.40),
+            '16': rgba(0, 0, 0, 0.16),
+            '08': rgba(0, 0, 0, 0.08)
+        ),
+        'white': (
+            '100': #FFF,
+            'bg': #FAFAFA,
+        ),
+    )
+  );
+
+
+@function color($theme: $theme,$key: 'primary', $variant: 'default') {
+    $map: map-get($theme-colors, $theme);
+    $map: map-get($map, $key);
+    @return map-get($map, $variant);
+}

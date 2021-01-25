@@ -1,0 +1,19 @@
+$zIndex: (
+    'alert': 11,
+    'modal': 10,
+    'drawer': 9,
+    'selectDrop': 8,
+    'fab': 7,
+    'side': 6,
+    'nav': 5,
+    'btn': 4,
+    'counter': 3,
+    'card': 2,
+    'columnHeader': 2,
+);
+
+
+@mixin set-zIndex($index) {
+    $map: map-get($zIndex, $index);
+    z-index: $map;
+}

@@ -1,0 +1,75 @@
+@import 'font.scss';
+
+$text-settings: (
+  'hxx': (
+    font-size: 3.25rem, // 52px
+    line-height: 3.75rem, // 60px
+    font-weight: 400
+  ),
+  'hx': (
+    font-size: 2.25rem, // 36px
+    line-height: 2.75rem, // 44px
+    font-weight: 400
+  ),
+  'h1': (
+    font-size: 1.5rem, // 24px
+    line-height: 2rem, // 32px
+    font-weight: 400
+  ),
+  'h2': (
+    font-size: 1.25rem, // 20px
+    line-height: 1.5rem, // 24px
+    font-weight: 400
+  ),
+  'h3': (
+    font-size: 1rem, // 16px
+    line-height: 1.5rem, // 24px
+    font-weight: 600
+  ),
+  'body-emphasis': (
+    font-size: 1rem, // 16px
+    line-height: 1.5rem, // 24px
+    font-weight: 600
+  ),
+  'body': (
+    font-size: 1rem, // 16px
+    line-height: 1.5rem, // 24px
+    font-weight: 400
+  ),
+  'button': (
+    font-size: .875rem, // 14px
+    line-height: 1.25rem, // 20px
+    font-weight: 600
+  ),
+  'caption': (
+    font-size: .75rem, // 12px
+    line-height: 1rem, // 16px
+    font-weight: 400
+  )
+);
+
+@function text-scale($level) {
+    @return map-get(map-get($text-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+    @return map-get(map-get($text-settings, $level), 'line-height');
+}
+
+@function font-weight($level) {
+    @return map-get(map-get($text-settings, $level), 'font-weight');
+}
+
+@mixin text-setting($level, $upper: false) {
+    font-size: text-scale($level);
+    line-height: line-height($level);
+    font-weight: font-weight($level);
+    @if $upper {
+        text-transform: uppercase;
+    }
+}
+
+@mixin set-font-size($size, $lh: 'initial') {
+    line-height: $lh;
+    font-size: $size;
+}

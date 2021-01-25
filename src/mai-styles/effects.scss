@@ -1,0 +1,23 @@
+$effects: (
+    'radius': (
+        'default': 4px,
+        '64': 64px,
+        '100': 100px
+    ),
+    'shadow': (
+        'default': 0px 0px 10px rgba(0, 0, 0, 0.1),
+        'dark': 0px 4px 10px rgba(0, 0, 0, 0.16)
+    )
+);
+
+
+@mixin set-effect($effect, $variant: 'default') {
+    $map: map-get($effects, $effect);
+    $map: map-get($map, $variant);
+    @if $effect == 'radius' {
+        border-radius: $map;
+    }
+    @if $effect == 'shadow' {
+        box-shadow: $map;
+    }
+}

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { BtnModule } from 'dls';
 
-import { InputModule, BtnModule } from "dls";
 
 import { SignInComponent } from './sign-in.component';
 
@@ -9,13 +9,12 @@ import { SignInComponent } from './sign-in.component';
   declarations: [
     SignInComponent
   ],
-  exports: [
-    SignInComponent
-  ],
   imports: [
     CommonModule,
-    InputModule,
-    BtnModule
-  ]
+    BtnModule,
+  ],
+  exports: [
+    SignInComponent,
+  ],
 })
 export class SignInModule {}

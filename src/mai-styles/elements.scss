@@ -1,0 +1,1267 @@
+@mixin set-icon-color($palette: $theme, $key:'primary', $variant: 'default') {
+    mai-svg-icon {
+        div {
+            background-color: color($palette, $key, $variant);
+        }
+    }
+}
+
+@import './zIndex';
+
+// Button
+
+.disabled {
+    opacity: .4;
+    cursor:not-allowed;
+    pointer-events: none;
+    user-select: none;
+}
+
+// Btn-cta
+mai-btn-cta {
+    width: 100%;
+    button {
+        color: color('bw', 'black', '56');
+        background-color: color('bw', 'white', '100');
+        &:hover {
+            mai-svg-icon {
+                div {
+                    background-color: color('bw', 'white','100') !important;
+                }
+            }
+            color: color('bw', 'white', '100');
+            background-color: color($theme, 'primary', 'dark');
+        }
+        &:active {
+            mai-svg-icon {
+                div {
+                    background-color: color('bw', 'white','100') !important;
+                }
+            }
+            color: color('bw', 'white', '100');
+            background-color: color($theme, 'primary', 'light');
+        }
+    }
+}
+
+// Btn
+mai-btn {
+    display:block;
+    width: fit-content;
+    @mixin defaultBtn($palette: $theme, $key: 'primary') {        
+        color: color('bw', 'white', '100');
+        background-color: color($palette, $key, 'default');
+        @include set-icon-color('bw', 'white', '100');
+        &:hover {
+            background-color: color($palette, $key, 'dark');
+        }
+        &:active {
+            background-color: color($palette, $key, 'light');
+        }
+    }
+
+    @mixin ghostBtn($palette: $theme, $key: 'primary') {
+        color: color($palette, $key, 'default');
+        border: 2px solid color($palette, $key, 'default') !important;
+        background-color: transparent;
+        @include set-icon-color($palette, $key, 'default');
+        &:hover {
+            color: color($palette, $key, 'dark');
+            border: 2px solid color($palette, $key,'dark') !important;
+            background-color: color($palette, $key,'opacity');
+            @include set-icon-color($palette, $key, 'dark');
+        }
+        &:active {
+            color: color($palette, $key, 'light');
+            border: 2px solid color($palette, $key, 'light') !important;
+            background-color: transparent;
+            @include set-icon-color($palette, $key, 'light');
+        }
+    }
+    @mixin textBtn($palette: $theme, $key: 'primary'){
+        color: color($palette, $key, 'default') ;
+        background-color: transparent;
+        @include set-icon-color($palette, $key, 'default');
+        &:hover {
+            color: color($palette, $key, 'dark');
+            background-color: color($palette, $key, 'opacity');
+            @include set-icon-color($palette, $key, 'dark');
+        }
+        &:active {
+            color: color($palette, $key, 'light');
+            background-color: transparent;
+            @include set-icon-color($palette, $key, 'light');
+        }
+    }
+    button {
+        @include defaultBtn();
+    }
+    .ghost {
+        @include ghostBtn();
+    }
+    .text {
+       @include textBtn();
+    }
+    .flat-info {
+        @include defaultBtn('alert', 'info');
+    }
+    .flat-success {
+        @include defaultBtn('alert', 'success');
+    }
+    .flat-danger {
+        @include defaultBtn('alert', 'danger');
+    }
+    .flat-warning {
+        @include defaultBtn('alert', 'warning');
+    }
+    .ghost-info {
+        @include ghostBtn('alert', 'info');
+    }
+    .ghost-success {
+        @include ghostBtn('alert', 'success');
+    }
+    .ghost-danger {
+        @include ghostBtn('alert', 'danger');
+    }
+    .ghost-warning {
+        @include ghostBtn('alert', 'warning');
+    }
+    .text-info {
+        @include textBtn('alert', 'info');
+    }
+    .text-success {
+        @include textBtn('alert', 'success');
+    }
+    .text-danger {
+        @include textBtn('alert', 'danger');
+    }
+    .text-warning {
+        @include textBtn('alert', 'warning');
+    }
+}
+
+// Btn-fab
+mai-btn-fab {
+    button {
+        background-color: color();
+        @include set-icon-color('bw', 'white', '100');
+        &:hover {
+            background-color: color($theme, 'primary', 'dark');
+        }
+        &:active {
+            background-color: color($theme, 'primary', 'light');
+        }
+    }
+}
+
+// Btn-icon
+mai-btn-icon {
+    button {
+        background-color: transparent;
+        @include set-icon-color();
+    }
+    .hoverAndActive {
+        &:hover {
+            background-color: color($theme, 'primary', 'opacity');
+            @include set-icon-color($theme, 'primary', 'dark');
+        }
+        &:active {
+            @include set-icon-color($theme, 'primary', 'light');
+        } 
+    }
+}
+
+
+// Svg-icon 
+mai-svg-icon {
+    div {
+        background-color: color();
+    }
+}
+
+
+// Alert
+mai-alert {
+    .wrapper {
+        p {
+            color: color('bw', 'white', '100');
+        }
+        @include set-icon-color('bw', 'white', '100');
+    }
+    .info {
+        background-color: color('alert', 'info', 'dark');
+        div {
+            background-color: color('alert', 'info', 'default');
+        }
+    }
+    .success {
+        background-color: color('alert', 'success', 'dark');
+        div {
+            background-color: color('alert', 'success', 'default');
+        }
+    }
+    .warning {
+        background-color: color('alert', 'warning', 'dark');
+        div {
+            background-color: color('alert', 'warning', 'default');
+        }
+    }
+    .danger {
+        background-color: color('alert', 'danger', 'dark');
+        div {
+            background-color: color('alert', 'danger', 'default');
+        }
+    }
+}
+
+
+// Side-nav
+mai-side-nav {
+    @include set-zIndex('side');
+    .mai-side-nav-container {
+        border-right: 1px solid color('bw', 'black', '16');
+        background-color: color('bw', 'white', '100');
+        color: color('bw', 'black', '56');
+        section {
+            .icon {
+                div {
+                    background-color: color('bw', 'black', '56');
+                }
+            }
+            .section {
+                background-color: transparent;
+                &:hover {
+                    background-color: color($theme, 'primary', 'opacity');
+                    color: color($theme, 'primary', 'dark');
+                    .icon {
+                        div {
+                            background-color: color($theme, 'primary', 'dark');
+                        }
+                    }
+                }
+                &:active {
+                    color: color($theme, 'primary', 'light');
+                    background-color: transparent;
+                    .icon {
+                        div {
+                            background-color: color($theme, 'primary', 'light');
+                        }
+                    }
+                }
+            }
+            .selected {
+                color: color();
+                .icon {
+                    div {
+                        background-color: color();
+                    }
+                }
+            }
+            nav {
+                border-top: Solid 1px color('bw', 'black', '08');
+                border-bottom: Solid 1px color('bw', 'black', '08');
+                padding: spc('8') 0;
+                margin-bottom: spc('8');
+                background-color: color('bw', 'white', 'bg');
+                .sub {
+                    &:hover {
+                        background-color: color($theme, 'primary', 'opacity');
+                        color: color($theme, 'primary', 'dark');
+                    }
+                    &:active {
+                        color: color($theme, 'primary', 'light');
+                        background-color: transparent;
+                    }
+                    mai-counter {
+                        position: absolute;
+                        right: spc('16');
+                    }
+                    aside {
+                        display: flex;
+                        align-items: center;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:last-of-type {
+                        margin-bottom: spc('16');
+                    }
+                    div {
+                        background-color: transparent;
+                    }
+                }
+            }
+            .subselected {
+                aside {
+                    span {
+                        color: color();
+                    }
+                    div {
+                        margin-left: 2.625rem;
+                        border-color: color() !important;
+                    }
+                }                    
+                &:hover {
+                    aside {
+                        div {
+                            border-color: color($theme, 'primary', 'dark') !important;
+                        }
+                    }
+                }
+                &:active {
+                    aside {
+                        div {
+                            border-color: color($theme, 'primary', 'light') !important;
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            border-top: 1px solid color('bw', 'black', '08');
+            background-color: color('bw', 'white', '100');
+            @include set-icon-color('bw', 'black', '56');
+            &:hover {
+                background-color: color($theme, 'primary', 'opacity');
+            }
+            &:active {
+                color: color($theme, 'primary', 'light');
+                background-color: transparent;
+                @include set-icon-color($theme, 'primary', 'light');
+            }
+        }
+    }
+}
+
+
+// Divider
+mai-divider {
+    display:block;
+}
+mai-divider.horizontal {
+    width: 100%;
+    height: 1px;
+    div {
+        background-color: color('bw', 'black', '08');
+    }
+    .horizontal {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+mai-divider.vertical {
+    height: 100%;
+    width: 1px;
+    div {
+        background-color: color('bw', 'black', '08');
+    }
+    .vertical {
+        height: 100%;
+        width: 1px;
+    }
+}
+
+
+// Header
+mai-header {
+    flex-grow: 1;
+    position: relative;
+    max-width: 100%;
+    #header {
+        color: color($theme, 'primary', 'dark');
+        white-space: pre;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .mai-header-container {
+        position: relative;
+        input {
+            caret-color: color('bw', 'black', '88');
+            color: color();
+        }
+        #header {
+            color: color();
+            max-width: calc(100% - 40px);
+        }
+        .placeholder {
+            color: color('bw', 'black', '56') !important;
+        }
+    }
+    .title {
+        height: 2px;
+        background-color: color($theme, 'secondary', 'default');
+        width: 15rem;
+    }
+    .invisible {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+mai-input {
+    display: block;
+    input, textarea {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        resize: none;
+        min-width: spc('40');
+    }
+    // Comportamento do botão de forma geral, com ícones e versão small
+    .mai-input-border {
+        background-color: color('bw', 'white', '100');
+        @include set-effect('radius');
+        border: 1px solid color('bw', 'black', '40');
+        position: relative;
+        .mai-input-content {
+            position: relative;
+            margin: spc('1');
+            min-height: spc('48') - spc('4');
+            padding: 0 spc('16');
+            display: flex;
+            align-items: center;
+            label {
+                z-index: 1;
+                position: absolute;
+            }
+            .mai-input-box {
+                z-index: 2;
+                position:relative;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                input {
+                    height: spc('48') - spc('4');
+                    flex-grow: 1;
+                    color: color('bw', 'black', '88');
+                }
+                textarea {
+                    margin: spc('8') 0;
+                    flex-grow: 1;
+                    @include text-setting('body');
+                    font-size: spc('16') !important;
+                    line-height: spc('24') !important;
+                    color: color('bw', 'black', '88');
+                }
+                .left {
+                    margin-right: spc('16');
+                    div {
+                       background-color: color('bw', 'black', '40');
+                    }
+                }
+                .right {
+                    margin-left: spc('12');
+                }
+            }
+            &.isDefault {
+                min-height: spc('56') - spc('4');
+                input {
+                    height: spc('56') - spc('4');
+                }
+                textarea {
+                    margin: spc('16') 0;
+                }
+                  
+            }
+        }
+        .mai-input-content.iconRight {
+            padding-right: spc('12');
+        }
+
+        //Quanto input está ativo
+        &.active {
+            border: 2px solid color();
+            .mai-input-content {
+                margin: 0;
+                .left {
+                    div {
+                        background-color: color();
+                    }
+                }
+            }
+        }
+    }
+
+    //Posicionando label do default
+    .mai-input-border {
+        .mai-input-content.isDefault {
+            label {
+                transition: transform .1s ease-out;  
+                left: spc('16');
+                &.transitionLabel {
+                    transform: translate( - spc('8'), - 27px);
+                    padding: 0 spc('4');
+                    background: linear-gradient(transparent 41%, color('bw', 'white', '100') 41%, color('bw', 'white', '100') 59%, transparent 59%);
+                    @include text-setting('caption');
+                }
+            }
+            &.iconLeft {
+                label {
+                    left: spc('56');
+                    &.transitionLabel {
+                        transform: translate( - spc('48'), - 27px);
+                    }
+                }  
+            }
+        }
+        &.active {
+            .mai-input-content.isDefault {
+                label {       
+                    left: spc('16');       
+                    padding: 0 spc('4');
+                    background: linear-gradient(transparent 41%, color('bw', 'white', '100') 41%, color('bw', 'white', '100') 59%, transparent 59%);
+                    @include text-setting('caption');
+                    transform: translate( - spc('8'), - 27px);
+                    color: color();
+                }
+                &.iconLeft {
+                    label {
+                        left: spc('56');
+                        transform: translate( - spc('48'), - 27px);
+                    }  
+                }
+            }
+        }
+    }
+    //Texto assistivo
+    .mai-input-container {
+        p {
+            margin-left: spc('16');
+            @include text-setting('caption');
+        }
+    }
+    .success {
+        p {
+            color: color('alert', 'success', 'default');
+        }
+        .statusIcon {
+            div {
+                background-color: color('alert', 'success', 'default');
+            }
+        }
+    }
+    .danger {
+        .mai-input-border {
+            border: 2px solid color('alert', 'danger', 'default');
+            .mai-input-content {
+                margin: 0;
+                input {
+                    &::placeholder {
+                        color: color('alert', 'danger', 'default');
+                    }
+                }
+                label {
+                    color: color('alert', 'danger', 'default') !important;
+                }
+                mai-svg-icon {
+                    div {
+                        background-color: color('alert', 'danger', 'default') !important;
+                    }
+                }
+            }
+        }
+        p {
+            color: color('alert', 'danger', 'default');
+        }
+    }
+
+}
+
+mai-modal {
+    .wrapper {
+        background-color: color('bw', 'black', '40');
+        .mai-modal-container {
+            background-color: color('bw', 'white', '100');
+            h2 {
+                color: color('bw', 'black', '88');
+            }
+            .modalContent {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: spc('24');
+            }
+            .buttons {
+                display: flex;
+                justify-content: flex-end;
+                align-items: bottom;
+            }
+        }
+        mai-btn {
+            margin-left: spc('8');
+        }
+    }
+}
+
+mai-avatar {
+    .mai-avatar-container {
+        background-color: color();
+        @include set-icon-color('bw', 'white', '100');
+    }
+}
+
+mai-radiobtn {
+    p {
+        user-select: none;
+    }
+    .option {
+        .radio {
+            border: 2px solid color('bw', 'black', '40');
+            .mark {
+                background-color: color();
+            }
+        }
+        &:hover {
+            background-color: color($theme, 'primary', 'opacity');
+        }
+        &:active {
+            .radio {
+                border: 2px solid color();
+                .mark {
+                    background-color: color();
+                }
+            } 
+            p {
+                color: color();
+            }
+        }
+    }
+
+    .radioSelected {
+        border: 2px solid color() !important;
+    }
+
+    mai-input {
+        width: 100%;
+        margin-bottom: spc('8');
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        .option {
+            height: 100% !important;
+        }
+        .mai-input-content {
+           height: spc('56');
+           padding: 0 !important;
+        }
+        &:active {
+            .mai-input-border {
+                border-color: color();
+            }
+        }
+    }
+}
+
+mai-checkbox {
+    .mai-checkbox-container {
+        &:active {
+            mai-svg-icon {
+                div {
+                    background-color: color();
+                }
+            }
+            p {
+                color: color();
+            }
+            .mai-input-border {
+                border-color: color();
+            }
+        }
+        &:hover {
+            background-color: color($theme, 'primary', 'opacity');
+        }
+        .mai-checkbox-content {
+            &:hover {
+                background-color: color($theme, 'primary', 'opacity');
+            }
+        }
+    }
+    mai-svg-icon {
+        div {
+            background-color: color('bw', 'black', '40');
+        }
+    }
+    .mai-checkbox-marked {
+        div {
+            background-color: color();
+        }
+    }
+    mai-input {
+        margin-bottom: spc('8');
+        width: 100%;
+        .mai-input-content {
+        height: spc('56');
+        padding: 0 !important;
+        }
+        .mai-checkbox-content {
+            width: 100%;
+            height: 100%;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+mai-replybtn {
+    user-select: none;
+    @mixin borderAndIcon($color) {
+        border: 1px solid $color;
+        mai-svg-icon {
+            div {
+                background-color: $color;
+            }
+        }
+    }
+    .reply {
+       @include borderAndIcon(color('bw', 'black', '40'));
+       color: color('bw', 'black', '40');
+    }
+    .agree {
+        &:hover {
+             @include borderAndIcon(color('alert', 'success', 'default'));
+             background-color: color('alert', 'success', 'opacity');
+        }
+        &:active {
+            background-color: transparent;
+        }
+    }
+    .agree.selected {
+        background-color: color('alert', 'success', 'default');
+        border: none;
+        @include set-icon-color('bw', 'white' ,'100' );
+        &:hover {
+            background-color: color('alert', 'success', 'dark');
+        }
+        &:active {
+            background-color: color('alert', 'success', 'light');
+        }
+    }
+    .deny {
+        &:hover {
+            @include borderAndIcon(color('alert', 'danger', 'default'));
+            background-color: color('alert', 'danger', 'opacity');
+        }
+        &:active {
+           background-color: transparent;
+        }
+    }
+    .deny.selected {
+        background-color: color('alert', 'danger', 'default');
+        border: none;
+        @include set-icon-color('bw', 'white' ,'100' );
+        &:hover {
+            background-color: color('alert', 'danger', 'dark');
+        }
+        &:active {
+            background-color: color('alert', 'danger', 'light');
+        }
+    }    
+    .success {
+        &:hover {
+            color: color('alert', 'success', 'default');
+            border: 1px solid color('alert', 'success', 'default');
+            background-color: color('alert', 'success', 'opacity');
+        }
+    }
+    .success.selected {
+        background-color: color('alert', 'success', 'default');
+        border: 1px solid color('alert', 'success', 'default');
+        color: color('bw', 'white', '100');   
+        &:hover {
+            background-color: color('alert', 'success', 'dark');
+        }
+        &:active {
+            background-color: color('alert', 'success', 'light');
+        }
+    }
+    .warning {
+        &:hover {
+            color: color('alert', 'warning', 'default');
+            border: 1px solid color('alert', 'warning', 'default');
+            background-color: color('alert', 'warning', 'opacity');
+        }
+    }
+    .warning.selected {
+        background-color: color('alert', 'warning', 'default');
+        border: 1px solid color('alert', 'warning', 'default');
+        color: color('bw', 'white', '100');   
+        &:hover {
+            background-color: color('alert', 'warning', 'dark');
+        }
+        &:active {
+            background-color: color('alert', 'warning', 'light');
+        }
+    }
+    .info {
+        &:hover {
+            color: color('alert', 'info', 'default');
+            border: 1px solid color('alert', 'info', 'default');
+            background-color: color('alert', 'info', 'opacity');
+        }
+    }
+    .info.selected {
+        background-color: color('alert', 'info', 'default');
+        border: 1px solid color('alert', 'info', 'default');
+        color: color('bw', 'white', '100');   
+        &:hover {
+            background-color: color('alert', 'info', 'dark');
+        }
+        &:active {
+            background-color: color('alert', 'info', 'light');
+        }
+    }
+    .danger {
+        &:hover {
+            color: color('alert', 'danger', 'default');
+            border: 1px solid color('alert', 'danger', 'default');
+            background-color: color('alert', 'danger', 'opacity');
+        }
+    }
+    .danger.selected {
+        background-color: color('alert', 'danger', 'default');
+        border: 1px solid color('alert', 'danger', 'default');
+        color: color('bw', 'white', '100');   
+        &:hover {
+            background-color: color('alert', 'danger', 'dark');
+        }
+        &:active {
+            background-color: color('alert', 'danger', 'light');
+        }
+    }
+    .success, .warning, .danger, .info {
+        @include text-setting('button', true);
+        &:active {
+           background-color: transparent;
+        }
+    }
+}
+
+mai-toggle {
+    .mai-toggle-container {
+        .circle {
+            background-color: color('bw', 'black', '40');
+        }
+        .background {
+            border: spc('2') solid color('bw', 'black', '40');
+        }
+    }
+    .active {
+        .circle {
+            background-color: color('bw', 'white', '100');
+        }
+        .background {
+            background-color: color($theme, 'primary', 'default');
+            border: none;
+        } 
+    }
+    
+}
+
+mai-counter {
+    position: relative;
+    .mai-counter-content {
+        background-color: color() !important;
+        color: color('bw', 'white', '100') !important;
+    }
+    .white {
+        background-color: color('bw', 'white', '100') !important;
+        color: color() !important;
+    }
+}
+
+mai-dropdown {
+    display:block;
+    @include set-zIndex('selectDrop');
+    .mai-dropdown-container {
+        background-color: color('bw', 'white', '100');
+        .item {
+            @include set-icon-color('bw', 'black', '56');
+            mai-avatar {
+                div {
+                    background-color: color(); 
+                    @include set-icon-color('bw', 'white', '100');
+                }
+            }
+            &:hover, &.hover {
+                p,span,mark {
+                    color: color('bw', 'white', '100');
+                }
+                background-color: color($theme, 'primary', 'dark'); 
+                @include set-icon-color('bw', 'white', '100');
+                mai-avatar {
+                    div {
+                        background-color: color('bw', 'white', '100');
+                        @include set-icon-color($theme, 'primary', 'dark');
+                    }
+                }
+            }
+            &:active {
+                background-color: color($theme, 'primary', 'light'); 
+            }
+            &.hover {
+                .mai-dropdown-svg-icon {
+                    div {
+                        background-color: color('bw', 'white', '100') !important;
+                    }
+                }
+            }
+            mark {
+                color: color('bw', 'black', '88');
+                background-color: transparent;
+            }
+        }
+    }
+
+    .mai-dropdown-selected {
+        p,mark{
+            @include text-setting('body-emphasis');
+            color: color();
+        }
+        span {
+            color: color();
+            font-weight: 600 !important;
+            mark {
+                @include text-setting('caption');
+                font-weight: 600 !important;
+            }
+        }
+        .mai-dropdown-svg-icon {
+            div {
+                background-color: color() !important;
+            }
+        }
+        &:hover {
+            p, mark, span {
+                color:inherit;
+            }
+            .mai-dropdown-svg-icon {
+                div {
+                    background-color: color('bw', 'white', '100') !important;
+                }
+            }
+        }
+    }
+}
+
+mai-select {
+
+    display:block;
+    .mai-select-container {
+        mai-dropdown {
+            width: 100%;
+            .mai-dropdown-container {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+mai-infobar {
+    width: 100%;
+    .mai-infobar-container {
+        padding: 0 spc('16');
+        background-color:color('bw', 'white', '100');
+        @include set-effect('radius');
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap:wrap;
+    }
+    .left:not(mai-btn-icon) {
+        margin-right: spc('16');
+    }
+    .left:not(mai-btn-icon), .right:not(mai-btn-icon) {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        height: spc('56');
+    }
+    .right:not(mai-btn-icon) {
+        justify-content: flex-end;
+    }
+}
+
+mai-btn-left {
+    button {
+        background-color: transparent;
+        color: color();
+        &:hover {
+            color: color($theme, 'primary', 'dark');
+            background-color: color($theme, 'primary', 'opacity');
+        }
+        &:active {
+            color: color($theme, 'primary', 'light');
+            background-color: transparent;
+        }
+    }
+}
+
+tooltip {
+    background-color: color('bw', 'black', '88') !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    min-height: spc('32') !important;
+    padding: spc('8') !important;
+    text-align: left !important;
+    @include text-setting('caption');
+    &::after{
+        display: none;
+    }
+    div {
+        width: fit-content !important;
+    }
+}
+
+mai-card {
+    width: 100%;
+    transition: all .25s ease-out;
+    .mai-card-content {
+        background-color: color('bw', 'white', '100');
+    }
+    .labelStatus {
+        border-left: spc('8') solid black;
+    }
+    .warning {
+        border-left-color: color('alert', 'warning') !important;
+    }
+    .danger {
+        border-left-color: color('alert', 'danger') !important;
+    }
+    .info {
+        border-left-color: color('alert', 'info') !important;
+    }
+    .success {
+        border-left-color: color('alert', 'success') !important;
+    }
+}
+
+mai-searchbar {
+    width: 100%;
+    .mai-searchbar-container {
+        height: spc('40') + spc('1');
+        width: 100%;
+        .mai-searchbar-border {
+            border-bottom: 1px solid color('bw', 'black', '40');
+            transition: border .1s ease-out .5s;
+            &.hideBorder {
+                border: none;
+            }
+            .mai-searchbar-content {
+                margin-bottom: spc('1');
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                .mai-searchbar-show {
+                    display: flex;
+                    width: 100%;
+                    max-width: 100%;
+                    opacity: 1;
+                    transition: all .5s ease-out;
+                    input {
+                        flex-grow: 1;
+                        outline:none;
+                        background-color: transparent;
+                        border:none;
+                        height: spc('40');
+                        color: color('bw', 'black', '88');
+                    }
+                    .btnsRight {
+                        display: flex;
+                        position: relative;
+                        right: - spc('4');
+                    }
+                    &.invisible {
+                        overflow:hidden;
+                        opacity: 0;
+                        width: 0;
+                        max-width: 0;
+                        z-index: -1;
+                        input {
+                            display:none;
+                        }
+                        .btnsRight {
+                            display: none;
+                        }
+                    }
+                }
+                .leftIcon {
+                    position:relative;
+                    left: - spc('4');
+                    margin-bottom: spc('2');
+                    margin-top: spc('2');
+                }
+                .leftSvg {
+                    margin-right: spc('8');
+                }
+            }
+
+            &.active {
+                border-bottom: 2px solid color();
+                .mai-searchbar-content {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        p {
+            @include text-setting('caption');
+        }
+        .success {
+            color: color('alert', 'success', 'default');
+        }
+
+        .danger {
+            color: color('alert', 'danger', 'default');
+        }
+    }
+}
+
+mai-drawer {
+    .wrapper {
+        .mai-drawer-container {
+            background-color: color('bw', 'white', '100');
+        }
+        &.shadow {
+            background-color: color('bw', 'black', '40');
+        }
+    }
+}
+mai-table {
+    .mai-table-container {
+        background-color: color('bw', 'white', 'bg');
+        .mai-table-headers {
+            //HEADER
+            .header {
+                background-color: color('bw', 'white', '100');
+                h3 {
+                    color: color('bw', 'black', '56');
+                }
+            }
+        }
+        .shadowOfHeader {
+            @include set-effect('shadow');
+       }
+        .mai-table-content {
+        
+            .mai-table-rows {
+                .column {
+                    //linha definir tamanho minimo
+                    .row {
+                        &:nth-child(2n + 1) {
+                            background-color: color($theme, 'primary', 'opacity');
+                        }
+                        &:nth-child(2n) {
+                            background-color: color('bw', 'white', 'bg');
+                        }
+                        .acordion {
+                            span {
+                                animation:.25s fadeText .15s ease-out;
+                                opacity: 0;
+                                animation-fill-mode: forwards;
+                            }
+                        }
+                        .acordion.list {
+                            animation: 2s openAcordion 0s ease-out;
+                        }
+                    }
+                }
+            }
+            .left-fixed {
+                background-color: color('bw', 'white', 'bg');
+                height: spc('40');
+                position: relative;
+            }
+        }
+    }
+    
+    @keyframes openAcordion {
+        from { max-height: spc('40') }
+        to { max-height: 62.5rem; }
+    }
+    
+    @keyframes fadeText {
+        from { opacity: 0 }
+        to { opacity: 1 }
+    }
+}
+
+mai-counter-time {
+    span.success {
+        @include set-icon-color('alert','success' ,'default');
+    }
+
+    span.warning {
+        @include set-icon-color('alert','warning' ,'default');
+    }
+
+    span.danger {
+        color: color('alert', 'danger', 'default');
+        @include set-icon-color('alert','danger' ,'default');
+    }
+}
+
+mai-progress-bar {
+    display: block;
+    width: 100%;
+    .mai-progress-bar-container {
+        background-color: color( $variant: 'opacity');
+        .mai-progress-bar-content {
+            background-color: color();
+        }
+    }
+}
+
+mai-chip {
+    width: 100%;
+    max-width: 100%;
+    .mai-chip-content {
+        background-color: color();
+        color: color('bw', 'white', '100');
+        @include set-icon-color('bw', 'white', '100');
+        .iconLeft {
+            margin-right: spc('16');
+        }
+    }
+}
+
+mai-top-nav {
+    .mai-page {
+        background-color: color('bw', 'white', 'bg');
+        .mai-page-container {
+            .mai-top-nav-container {
+                background-color: color('bw', 'white', 'bg');
+            }
+        }
+    }
+    .mai-top-nav-container-collapsed {
+        @include set-effect('shadow');
+        .down {
+            mai-header {
+                .title {
+                    display: none;
+                }
+                h1 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .side-nav-mobile {
+        .mai-side-nav-container {
+            width: 19rem !important;
+            footer {
+                display: none !important;
+            }
+        }
+    }
+}
+
+mai-overflow {
+    .mai-dropdown-container {
+        max-width: 20.5rem !important;
+    }
+}
