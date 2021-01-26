@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HeaderDataFormat } from './template-one-column.model';
 
 @Component({
   selector: 'ap-template-one-column',
@@ -19,6 +18,8 @@ export class TemplateOneColumnComponent implements OnInit {
   ]
 
   @Input() label: string = "";
+
+  foto: string = '../../../../assets/imgs/profile.png'
 
   constructor() { }
 
