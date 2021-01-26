@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './modules/sign-in/sign-in.component';
 import { ShareComponentModule } from './shared/share-component.module';
 import { OrdersListComponent } from './modules/orders-list/orders-list.component';
+import { TemplateOneColumnComponent } from './core/layouts/template-one-column/template-one-column.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
-    OrdersListComponent
+    OrdersListComponent,
+    TemplateOneColumnComponent
   ],
   imports: [
     BrowserModule,
