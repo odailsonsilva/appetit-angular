@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BtnModule, InputModule } from 'dls';
+import {
+  BtnModule,
+  InputModule,
+  SideNavModule
+} from 'dls';
 
 
 @NgModule({
@@ -9,11 +13,13 @@ import { BtnModule, InputModule } from 'dls';
   imports: [
     CommonModule,
     BtnModule,
-    InputModule
+    InputModule,
+    SideNavModule
   ],
   exports: [
     BtnModule,
-    InputModule
+    InputModule,
+    SideNavModule
   ]
 })
 export class ShareComponentModule { }

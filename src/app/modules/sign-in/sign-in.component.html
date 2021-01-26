@@ -1,13 +1,13 @@
 <div class="container">
   <div class="content">
     <header >
-      <img src="../../../assets/logos/logo.svg" alt="Logo Appetit"/>
+      <img src="../../../assets/icons/logos-app/logo.svg" alt="Logo Appetit"/>
       <h3>Seja bem-vindo!</h3>
       <p>Nós sabemos a importância de estar sempre de barriga cheia e o quanto isso pode ajudar no seu dia.</p>
     </header>
     <form>
       <mai-input placeholder="Email"><input #emailInput type="text" (keyup)="email = emailInput.value"></mai-input>
-      <mai-input placeholder="Senha"><input #senhaInput type="text" (keyup)="senha = senhaInput.value"></mai-input>
+      <mai-input placeholder="Senha"><input #senhaInput type="password" (keyup)="senha = senhaInput.value"></mai-input>
       <a href="#">RECUPERAR MINHA SENHA</a>
       <mai-btn label="Entrar" [disabled]="!email || !senha"  (click)="handleRedirectOrders()"></mai-btn>
     </form>

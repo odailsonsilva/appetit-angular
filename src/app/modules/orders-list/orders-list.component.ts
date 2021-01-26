@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersListComponent implements OnInit {
 
+  data: any[] = [
+    {label:'PEDIDOS', value: 'pedidos', icon: '../../../assets/icons/orders.svg',
+        ss:[
+          {label: 'em abertos', value: 'aberto'},
+          {label: 'encerrados', value: 'concluidos'},
+        ]
+    },
+    {label:'clientes', value: 'clientes', icon: '../../../assets/icons/user.svg'}
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
