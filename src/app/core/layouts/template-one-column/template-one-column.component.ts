@@ -8,7 +8,7 @@ import { HeaderDataFormat, SideBarFormat } from './template-one-column.model';
 })
 export class TemplateOneColumnComponent implements OnInit {
 
-  data: SideBarFormat[] = [
+  data: any = [
     { label:'pedidos', value: 'pedidos', icon: '../../../assets/icons/orders.svg',
         ss:[
           {label: 'em abertos', value: 'aberto'},

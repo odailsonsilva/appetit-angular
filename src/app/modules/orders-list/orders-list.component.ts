@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { orders } from './orders';
+import { orders, OrdersFormat } from './orders';
 
 @Component({
   selector: 'app-orders-list',
@@ -8,7 +8,7 @@ import { orders } from './orders';
 })
 export class OrdersListComponent implements OnInit {
 
-  days: [] = orders
+  days:  OrdersFormat[] = orders
 
   constructor() { }
 

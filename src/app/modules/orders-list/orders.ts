@@ -1,4 +1,22 @@
-export const orders: any = [
+export interface OrdersFormat {
+  day: string,
+  total: string,
+  todos_pedidos: TodosPedidosFormat[],
+}
+
+interface TodosPedidosFormat {
+  id: number,
+  nome: string,
+  foto: string,
+  pedido_infos: PedidoFormat[],
+}
+
+interface PedidoFormat{
+  pedido: string,
+  valor: string
+}
+
+export const orders: OrdersFormat[] = [
   {
     day: '13/05/2019',
     total: 'R$ 45,80',
