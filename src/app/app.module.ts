@@ -7,6 +7,7 @@ import { SignInComponent } from './modules/sign-in/sign-in.component';
 import { ShareComponentModule } from './shared/share-component.module';
 import { OrdersListComponent } from './modules/orders-list/orders-list.component';
 import { TemplateOneColumnComponent } from './core/layouts/template-one-column/template-one-column.component';
+import { OrderUserComponent } from './modules/order-user/order-user.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { TemplateOneColumnComponent } from './core/layouts/template-one-column/t
     AppComponent,
     SignInComponent,
     OrdersListComponent,
-    TemplateOneColumnComponent
+    TemplateOneColumnComponent,
+    OrderUserComponent
   ],
   imports: [
     BrowserModule,

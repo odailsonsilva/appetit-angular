@@ -1,0 +1,12 @@
+<ap-template-one-column [label]="titulo">
+  <div *ngFor="let day of days"  class="orders">
+    <h6>{{day.day}}</h6>
+    <div *ngFor="let order of day.pedido_infos" class="orders__item">
+        <mai-card
+        [label]="order.pedido"
+        [suLabel]="order.valor"
+        [showLabelStatus]="false"
+      ></mai-card>
+    </div>
+  </div>
+</ap-template-one-column>

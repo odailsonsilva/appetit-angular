@@ -1,0 +1,28 @@
+ap-template-one-column header mai-searchbar {
+  margin: 24px
+}
+
+div.orders {
+
+  h6 {
+    margin-bottom: 16px;
+
+    span{
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+
+  + div.orders {
+    margin-top: 16px;
+  }
+
+  &:last-child{
+    margin-bottom: 24px;
+  }
+}
+
+div.orders__item{
+  & + div.orders__item{
+    margin-top: 8px;
+  }
+}

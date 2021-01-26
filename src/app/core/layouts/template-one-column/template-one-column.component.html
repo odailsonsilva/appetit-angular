@@ -1,6 +1,6 @@
 <mai-top-nav
 [sideNavData]="{ data: data , logotype: 'appetit', sectionSelected: 'pedidos', subSectionSelected: 'aberto', isClosed: false }"
-[headerData]="headerDados"
+[headerData]='{label: label || "Olá, Vanusa!", editableTitle: false}'
 >
   <div class="content">
     <ng-content></ng-content>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderDataFormat, SideBarFormat } from './template-one-column.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { HeaderDataFormat } from './template-one-column.model';
 
 @Component({
   selector: 'ap-template-one-column',
@@ -18,10 +18,7 @@ export class TemplateOneColumnComponent implements OnInit {
     { label:'clientes', value: 'clientes', icon: '../../../assets/icons/user.svg'}
   ]
 
-  headerDados: HeaderDataFormat = {
-    label: 'Olá, Vanusa!',
-    editableTitle: false
-  }
+  @Input() label: string = "";
 
   constructor() { }
 
