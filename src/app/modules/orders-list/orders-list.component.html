@@ -1,3 +1,20 @@
 <ap-template-one-column>
+  <header>
+    <mai-btn-cta label="fazer novo pedido"></mai-btn-cta>
+    <mai-searchbar
+    [btnRight]='{label:"mai-ic-filter", alt:"teste"}' placeholder='Procure o pedido aqui...'
+    ><input type="text"
+    /></mai-searchbar>
+  </header>
 
+  <div *ngFor="let day of days"  class="list">
+    <h6>{{day.day}}, <span>Você vendeu</span> {{day.total}}</h6>
+    <div *ngFor="let order of day.todos_pedidos" class="list__item">
+        <mai-card
+        [label]="order.nome"
+        [suLabel]="order.pedido_infos[0].pedido"
+        [showLabelStatus]="false"
+      ></mai-card>
+    </div>
+  </div>
 </ap-template-one-column>

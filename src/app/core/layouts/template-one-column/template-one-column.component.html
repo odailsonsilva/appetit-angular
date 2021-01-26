@@ -1,7 +1,8 @@
-<div class="container">
-  <mai-side-nav logotype="appetit" [data]="data" ></mai-side-nav>
-
-  <main class="content">
+<mai-top-nav
+[sideNavData]="{ data: data , logotype: 'appetit', sectionSelected: 'pedidos', subSectionSelected: 'aberto', isClosed: false }"
+[headerData]="headerDados"
+>
+  <div class="content">
     <ng-content></ng-content>
-  </main>
-</div>
+  </div>
+</mai-top-nav>

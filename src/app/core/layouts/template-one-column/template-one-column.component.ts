@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderDataFormat, SideBarFormat } from './template-one-column.model';
 
 @Component({
   selector: 'ap-template-one-column',
@@ -7,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateOneColumnComponent implements OnInit {
 
-  data: any[] = [
-    {label:'pedidos', value: 'pedidos', icon: '../../../assets/icons/orders.svg',
+  data: SideBarFormat[] = [
+    { label:'pedidos', value: 'pedidos', icon: '../../../assets/icons/orders.svg',
         ss:[
           {label: 'em abertos', value: 'aberto'},
           {label: 'encerrados', value: 'concluidos'},
         ]
     },
-    {label:'clientes', value: 'clientes', icon: '../../../assets/icons/user.svg'}
+    { label:'clientes', value: 'clientes', icon: '../../../assets/icons/user.svg'}
   ]
+
+  headerDados: HeaderDataFormat = {
+    label: 'Olá, Vanusa!',
+    editableTitle: false
+  }
 
   constructor() { }
 

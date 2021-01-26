@@ -4,8 +4,12 @@ import { CommonModule } from '@angular/common';
 import {
   BtnCtaModule,
   BtnModule,
+  CardModule,
+  HeaderModule,
   InputModule,
-  SideNavModule
+  SearchbarModule,
+  SideNavModule,
+  TopNavModule
 } from 'dls';
 
 
@@ -16,13 +20,21 @@ import {
     BtnModule,
     InputModule,
     SideNavModule,
-    BtnCtaModule
+    BtnCtaModule,
+    HeaderModule,
+    TopNavModule,
+    CardModule,
+    SearchbarModule
   ],
   exports: [
     BtnModule,
     InputModule,
     SideNavModule,
-    BtnCtaModule
+    BtnCtaModule,
+    HeaderModule,
+    TopNavModule,
+    CardModule,
+    SearchbarModule
   ]
 })
 export class ShareComponentModule { }
