@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { orders, OrdersFormat } from './orders';
 
 @Component({
@@ -10,9 +11,12 @@ export class OrdersListComponent implements OnInit {
 
   days:  OrdersFormat[] = orders
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  handleNavigateOrderUser(){
+    this.router.navigate(['pedidos', '1'])
+  }
 }

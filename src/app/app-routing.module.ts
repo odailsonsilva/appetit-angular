@@ -7,7 +7,7 @@ import { SignInComponent } from './modules/sign-in/sign-in.component';
 const routes: Routes = [
   { path: '', component: SignInComponent },
   { path: 'lista-de-pedidos', component: OrdersListComponent },
-  { path: 'pedidos/1', component: OrderUserComponent },
+  { path: 'pedidos/:id', component: OrderUserComponent },
 ];
 
 @NgModule({
