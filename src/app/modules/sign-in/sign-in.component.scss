@@ -59,3 +59,18 @@ mai-btn {
   width: 328px;
 }
 
+/*media querys*/
+@media(max-width: 432px){
+  div.content{
+    width: 90%;
+    margin: 16px 0;
+  }
+
+  mai-input {
+    width: 100%;
+  }
+
+  mai-btn{
+    width: 80%;
+  }
+}
