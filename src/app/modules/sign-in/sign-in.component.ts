@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ap-sign-in',
@@ -10,9 +11,12 @@ export class SignInComponent implements OnInit {
   senha: string = ''
   disabled: boolean = true
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  handleRedirectOrders(): void {
+    this.router.navigate(['lista-de-pedidos'])
+  }
 }

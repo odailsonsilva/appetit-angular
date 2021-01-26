@@ -9,7 +9,7 @@
       <mai-input placeholder="Email"><input #emailInput type="text" (keyup)="email = emailInput.value"></mai-input>
       <mai-input placeholder="Senha"><input #senhaInput type="text" (keyup)="senha = senhaInput.value"></mai-input>
       <a href="#">RECUPERAR MINHA SENHA</a>
-      <mai-btn label="Entrar" [disabled]="!email || !senha"></mai-btn>
+      <mai-btn label="Entrar" [disabled]="!email || !senha"  (click)="handleRedirectOrders()"></mai-btn>
     </form>
     <footer>
       <p>Infoway Gestão em Saúde ©, 2019.</p>
