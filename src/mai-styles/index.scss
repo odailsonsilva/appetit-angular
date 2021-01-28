@@ -57,6 +57,14 @@ button {
     user-select: none;
 }
 
+@media (max-height: 768px) {
+  h1{
+    font-size: 1.5rem; // 52px
+    line-height: 3.75rem; // 60px
+    font-weight: 400;
+  }
+}
+
 
 // FUNÇÕES/MIXINS E FORMAS DE USO
 

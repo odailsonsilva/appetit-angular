@@ -1,6 +1,9 @@
 <ap-template-one-column>
   <header>
-    <mai-btn-cta label="fazer novo pedido"></mai-btn-cta>
+    <mai-btn-cta
+      label="fazer novo pedido"
+      (click)="handleNavigateNewOrder()"
+    ></mai-btn-cta>
     <mai-searchbar
     [btnRight]='{label:"mai-ic-filter", alt:"teste"}' placeholder='Procure o pedido aqui...'
     ><input type="text"

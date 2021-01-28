@@ -19,4 +19,8 @@ export class OrdersListComponent implements OnInit {
   handleNavigateOrderUser(){
     this.router.navigate(['pedidos', '1'])
   }
+
+  handleNavigateNewOrder(){
+    this.router.navigate(['novo-pedido/selecionar-prato'])
+  }
 }

@@ -1,0 +1,30 @@
+<div class="container">
+  <mai-side-nav
+    logotype="appetit"
+    [data]="data"
+    sectionSelected='pedidos'
+    subSectionSelected='aberto'
+  ></mai-side-nav>
+
+  <div class="content">
+
+    <div class="area-one">
+      <button tyoe="button" (click)="handleBackPage()">
+        <img src="../../../../assets/icons/arrow-left.svg" alt=""/>
+      </button>
+      <div>
+        <mai-header [label]="headerLeft"></mai-header>
+        <ng-content select=".cart"></ng-content>
+      </div>
+    </div>
+
+    <div class="area-two">
+      <mai-avatar [photo]="foto"></mai-avatar>
+      <div>
+        <mai-header [label]="headerRight"></mai-header>
+        <ng-content select=".painel-main"></ng-content>
+      </div>
+    </div>
+
+  </div>
+</div>
