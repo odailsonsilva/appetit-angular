@@ -11,11 +11,12 @@ import {
   ProgressBarModule,
   SearchbarModule,
   SideNavModule,
-  TopNavModule
+  TopNavModule,
+  RadiobtnModule
 } from 'dls';
 
 @NgModule({
-  declarations: [],
+  declarations: [ ],
   imports: [
     CommonModule,
     BtnModule,
@@ -27,7 +28,8 @@ import {
     CardModule,
     SearchbarModule,
     AvatarModule,
-    ProgressBarModule
+    ProgressBarModule,
+    RadiobtnModule
   ],
   exports: [
     BtnModule,
@@ -39,7 +41,8 @@ import {
     CardModule,
     SearchbarModule,
     AvatarModule,
-    ProgressBarModule
+    ProgressBarModule,
+    RadiobtnModule
   ]
 })
 export class ShareComponentModule { }

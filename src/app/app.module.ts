@@ -15,6 +15,7 @@ import { ContainerProgressBarComponent } from './shared/components/container-pro
 import { ListComponent } from './shared/components/list/list.component';
 import { ItemComponent } from './shared/components/list/item/item.component';
 import { DetailsProductComponent } from './modules/details-product/details-product.component';
+import { DetailsComponent } from './shared/components/details/details.component';
 
 
 
@@ -31,7 +32,8 @@ import { DetailsProductComponent } from './modules/details-product/details-produ
     ContainerProgressBarComponent,
     ListComponent,
     ItemComponent,
-    DetailsProductComponent
+    DetailsProductComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

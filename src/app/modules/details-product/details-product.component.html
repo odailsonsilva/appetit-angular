@@ -1,1 +1,16 @@
-<p>details-product works!</p>
+<ap-template-two-columns
+  headerLeft="Novo pedido"
+  headerRight="Detalhes do pedido"
+>
+    <div class="cart">
+     <ap-store></ap-store>
+    </div>
+
+    <div class="painel-main">
+      <header>
+        <p>Aproveite para adicionar alguma observação para este pedido, caso queira.</p>
+        <app-details [productDetail]="filterProductDetail"></app-details>
+      </header>
+    </div>
+
+</ap-template-two-columns>
