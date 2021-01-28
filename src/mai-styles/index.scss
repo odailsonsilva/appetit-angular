@@ -39,12 +39,12 @@ h3 {
     // @include set-font-size(8rem, 8.75rem);
 }
 h4 {
-    @include text-setting('caption');
-    color: color('bw', 'black', '40');
+    @include text-setting('h4');
+    color: color('bw', 'black', '88');
 }
 h6 {
   @include text-setting('h6');
-  color: color('bw', 'black', '88');
+  color: color('bw', 'black', '40');
 }
 // MAKE testar se eu passo parametro true detalhando o que é
 button {

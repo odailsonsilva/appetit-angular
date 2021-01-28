@@ -17,6 +17,7 @@ import { ItemComponent } from './shared/components/list/item/item.component';
 import { DetailsProductComponent } from './modules/details-product/details-product.component';
 import { DetailsComponent } from './shared/components/details/details.component';
 import { AddProductComponent } from './shared/components/details/add-product/add-product.component';
+import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.component';
 
 
 
@@ -35,7 +36,8 @@ import { AddProductComponent } from './shared/components/details/add-product/add
     ItemComponent,
     DetailsProductComponent,
     DetailsComponent,
-    AddProductComponent
+    AddProductComponent,
+    FeedbackOrderComponent
   ],
   imports: [
     BrowserModule,
