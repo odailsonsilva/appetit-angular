@@ -22,7 +22,7 @@ export const products: ListProducts[] = [
     produtos: [
       {
         id: 1,
-        nome: 'Simples',
+        nome: 'Cuscuz Simples',
         foto: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhMWFRUXFRUXFRUXFxcVFhYVFRUXFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi8lICUtLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EADQQAAEDAwMDAgQGAgIDAQAAAAEAAhEDBCESMUEFUWEicTKBkbEGE6HB4fAU8ULRI1JyFf/EABoBAAIDAQEAAAAAAAAAAAAAAAECAAMEBQb/xAAoEQACAgICAgICAgIDAAAAAAAAAQIRAyEEMRJBE1EiYUJxMrEFFBX/2gAMAwEAAhEDEQA/AANKPSpkpilbAJiQ0IdBqwLLbuiB1Nu5CxesdZ0AwV5Sr1Gq8mCVkfKV1FGqHFbVs+iP6lSbyFnVvxMwGAQvEPp1YkkpMS4wl/7LfRbHix9s+pWnW2O5C0aV00r5RbF7DgrfsOquG6rfNlF7BLiL+J9CYQUQNXm7Hqs8rZtryVpxcuE9GSeKUR0NVwFxhlEAWoqOAKwC6GrPvOoaHQo3QUrNEBdhUZVGkEpa5vsQ1RySIk2du7mMBVt3kpKjTLjlbFtRWOeWUnrou8UkdpU1Z9NHwAl6tWElpLYqtvRR7g0LOuuqtaleo3pOAsmqyd1zc/NUXUTpcfg+SuYxc9dJ2SD+qvK46il6lFY3yZy7Z0ocXFH0Xd1N/dCPVXobqJVTSRWV/Y/wY/oZZ1pwTtDrGrdYdSkhhsK6OeS9lOTi45Lo9tQvmuCbpvaRleDoXbmlen6Xdh4XQw8ny7OTyOK4bRTq3SwfUFku6UT8JXrX0/SsK4cWmWrcsiXZjowq9q9m4S+pexsLqnVGlwEoV/8AhxrstwrkrVoV67PJSotGp0OqDCiFMlnLrqz59OyVueuO0wgXDHAShssy5swuNLlTktvR1YYIITg1TJTbKGkQ1qCJaYAWzbVMAEZVEpNf0XuLFKNrrOl2Ed/4fa3IK1aNoHZburVGaPjKMZUiiTd6MF9iW5K4Ledk3XuQTDRKrSpP/wDVJ5IsSdbKUAWcrWtL6OVn1aRI8pZoLTlRNJ2mBx8uz2tp1MclatC7a7lfOKlyeCnbK8qcZPYLdj5rjpmWfFvaPorHBY3XLUkhwWdaVbs7Uz7nC2KNtWcP/IQPbK1vlQnEzrE4uzLbfkjScFO0KYiSZVz0IEyXH9EzS6Yxu0/VZXnt7LGl6L2wCfak20ANl0uPdFZ0I4NjTlkdUqkJr813dLXIL/iyqs2RTjSLcFQlcjCe9SFoOsWob7bsuNLjZFs7MeXheuhBzEJ7E+aBQHMVThOPaLVljLpippoL2JtyFVaRuEVYLEarEs8JyoUpVV8GML1E90WsZSLsrR6RQgrXiVsy8mvBnqKVUkQlqtvAMq9JsIz3ahC6kYnDemeRunup1NTV6vo3Uw9ondYXVrUpSg91MgtUxZZY5+L6GlFTie+gKLyY6nWUXQ+aJR8bMB9STpK2LWA2Fw2tM5QKtg6YaSvNSi0dXzsetelsJ1YlN0+kCcrNtKVamROQtI9YAOVW7XYfKT6Hf8cMEN3WF1KzqOknZa9LqjJlEr3LX7EITerskW0zzVidBy2Stig3UJcITYpM7BEbTacFJHJY8pJnm+oMg4KUp22r4nL091YscvP9U6aQZYUYunssg09FH2rGiQZXsfwn05goirHqdOfHYLzHTek1KgAiB3K990e3NOi1hIMBXY5Jyoo5Go9jDRGy4VZQK9GQouEK5C4QiAE4KhCK4KhUCAcFRzUcoZCgRctVHNTBCo4KEEqlNKVGLTc1BqU8SoSzObRBOU91Ro/KhvAS1Sml6rnbIKKV17HeSTat9GJUdKEaLjwt+0s2O9wnW2YHCqhxmbpc2KWkebtemuJkrbtrQBPNt44UiFux4lEwZuS5ka3CqaaK1W0rSkZGIXTQUlWtojCeut0I1JCrnJXQ0UwTRhRCcFEnmx6FLQiAStNlwAJDVU0mNCVqVHOMNGFhlcEaV+TH7asXySsm5ty5+3K0WgtZ2RrCOVTK3SZZF1bRnPtJMbJd3T6mqGOK9Nc27YkLJZVIfASzg4OmPGXktGVe21ak2dSyafVq4PK9B1G4c46SgWtoNUkYRU4J1Q6j+NsQp9XrEhoBJOwXpugdNq1DrrCBw1afSOjsaRUIzx7LZdvhU5Jr0ivy+i1OkAIARKHKETH7rtB3qQx5ayKyuUbiw0LkIjlUrodGeyq5KsuJgFCqEIkKrlAgiFUhFchvUCCc1CcmXBBcFCAXBD7hGKC8ZUIL1AgFqZcl3BEhWlSIdqb9O4Wiz1ZCztZCrT6kKc6tpVkGvYjTNVzuEu9spR3V2OyCEEdUZO6tWRC+DHg6N1Q1lj3fVW6t1YdcoxGpH5Yh+NjVV+6yq/U2sMFC6l1oQQzJXn2W76hlypk7ei6MKWzXq9aEmFxBZ0nCiPxTJ5YzUtCXuyVu0GtHCz6bGtOOU5QeFix2uy3JT6E+oVHOIDQk7gvb7r0DWt3QqzGEzhJkg3ux4TS1QjYVqz8HZPUrIhSlcNHZEPUGnkJY/l2Rv6Rl1LM68havS7EOydglzdte4Nbkk4AXpLaiGNAVLTUmPKei5wMLjX8KPVmMCzPychdJEqOH8oMF0EYG890UOkkcSg3VTBAB7CEt/wApOxl9IfqvhZ1e4cDI27Ji3cXUxO4/srN6jUjZdqOa8V/oxPHU6NGjdgiVd1y3usK3dtnhVr1ScJI5H49BcNm0+9ahPv2rFNRDNRP8j+ieBtG/CGb4LHNRVNVDzYfA2TfBV/zAsb81T8xHzZPA2P8AKCqaoKyPzVPzlPk+0DwNUuQXhIi4XRclOpJgpjDglLugHNIKKLhdFVvKbTBs8RfU3Ujg4P6LPZVeDMles6jTY9zgNp53lZg6b4SY23cezR56syXvc47qtO2yt1nTUxS6Yr445MR5UZdra+FuWdmmbayAWhTpQteLAl2Z8mWwbaGFE2Grq10UHgrq4uBESUSzubg8EFextmUgIMIrm0R2XCeNePo6Xy/o8Vc3FyDElNWFpXfkuK9HXcw7twtC2ayAQqlUnWhpTqPR5r/8Kqcl5SlfpmjdxXrbq8GyQuLIVRISTkrqA2NvuQt+DbeaxO+kfde2Kxfwv078prnHdx/QLbfUGAsuSmrbDN3LRRozn6KOPCj3gCeULXgTzkfPyqEl1YDtON4Mzj+/NWqukEDdctw/OqPACtVb6SAM5j3U+O4hvYrQ1sB1OmTgdvYpHqDz2zwtINwGmJDR9kj+WS9sYgyJnI2MFNHLKvBdB8Yt+TM5n5m+BHj9ClqdeqXkEemMEDnyt51vuXHkwB32CqG6cQGjcnGn5eUY5J9ILcfo81cVKjXCZ0yBgd85PGExfMhhc1zpH28+Fqsa/MiWjMxnxHdFt4d6htt9PCdZHoja+jBpUKjmAu5AjORjErlnZvL4JkcZMnfklO1w4VGs0+kk7DHeD8vsmH0MggfCQTHvk/SVPJ2FvRk1emEOw4jn4iRHPsu/4zpcA6AMwCZ+vZa9UGC6Y7EiTA8fNKUdRzjyTuRKjm77Fu0Zt3TqCNL3bbYM/VI1biuz4m+cjj5Lda5uotO/HO/nhdvmtMBwIH3nGIVsMgLXtGQbl2nVA9uT7IdHqQImCP1WjeW+pkAf/PhZ7bTAwD3wmjl1sHjFhaN81wkFdvLvSMHJ2/7Q2W4AMADwkadDKsjkEcFYejV7rZsGBwjkLHa2Oy0+lXEOjgq3izrKr96K8q/HQ7/jALopJlSF3VFGGwTWooC4uymQC0ri5KiYU8xQk5LlK8k+lyvVcwbEQOFLRrXeoCfC8q00ztp+zV6fbuIhxlblrbjTCyLNr94jwnal65g2V2JxjuSKMlydIF1C0jIQLCqXHS0e6LT6qHyCIQ7ShFUOaYk/oqsijflAsi3VSPS0jDYVnnE9lyAAuloI+ixtvYNA94yu1Phkf8RAQ3ua09iclEa4OAVcZdr7Ga9grZ0ZJku48JhtQRMfL2Qi7eOP7CDTHvySOPCnk1pBpPZcgHI25XKj4jvx7rlSq2ImO/8AeVWo7AEwSQBO6KdW0QR/yHT6my7ge+QSmTLxqfiNmxufKI6BJOSME/b7oNpU1EgwQMgz3OxCEb6TC6e6LNuJYHQYOB7zGyA6lUDtTdjEg99pRqVMDbYfvOIVKlxI1bydtvH35T22ti9dAbqWEmcRJ5+iHYvc7baN/wBoXaw1CHZPPgf9rllgBg8knxO6F7G/iHuqocNJ9jj90Go4RAwlblzjDB3ORPJR7a3jLsxOd+8f3wrG23oSqQuWtAgwIzPJJ+6rUuGkajMediuEag4TGqRMTvj91V/wAGNOAfYYJHZSKtBZwsOkZMEfQJYUoyJ2/f8ARMVarfhG3HPyCCbctGrVImI91a4q9Cp/YEMgkg9s/dArtAdgz37e4Tj6gEA7n7oBY1szvv7coxkwMVqQTsi06gaQfKhGx/TwqlvfurIP8hZdG/SqSAUQFKUKmAjBy9JF6OcwsqakIlQFOALqUQ1EwKPB3FcB2Nlv9DuWtiTvwso6CCSOP1S1G4gy0Lzy3TXo7ko+So9/U6kxoSdTrTDvsV5o1i/J3XXW7ogfVCeWTdWVw48V2bNesw7FbHRqBMOmQJXlLbp7icSV7XodkaVOHbkzCy5Hf+I80kuzXIwoKkNXFCZEeFng1ZS0IV6Ti7URj5fZNF5LYbjG58KtYhvxEx9lbSwxpMjf3x/CqWOVtr/eyxyVKy1rhudzkpe5pOxoOee0eytBfDicdu5/ZVdOrECYk9lG/Jf0RaYakyW5bk7+Y7qr3YgnIH9wq3NTTnMiNv1QHOBIIGe5CdyitCpPstWAiP1P3nus31MdpbMk++6Zqlzi4RAG/wA/9LpqBgBIyB7/AHVdxsdWkGqtLYzkjJ8pN1sXEgY05k8+3jKPTqB85wRIxt3324Qw+ZDsz27oy0/0BWAdbu0iHAE/EN4+alrqbqMTIieR3VntfgHA38n3UdUGmGjGSfMbwrIp61RG9UY102HyxzgSCHHcQewW3b/AAT8Lf6SUnSDA4OPkx5hGaCQTx7wI4HlOvyVEm7Qo1zmk6jgmdv0j5KrQNLiDAPGw+QVatQPfHABk9/A8rgtXek6vTn0+OB4UqmR9C4JMBu/bt5JR7gExqxH6+ylsxoJc3zv27oVe4DskxG4VmxX+gLsAl2QMoZqBw2ET90KtUDzAmJ22VnUsw3t35TpUB/s4duRE+6pVraf28pktLcEj2S9RsmDtgorTFZo2lWWhONcsOk8gQNkxRrEZ4XThz4qk0ZZYWasq4CBQfIlMBdOD8laM7VMi6uQuqwWzy/UOkVicNx4SlPptQbscvobUUMHZYHw41SZtXMku0eKtaUf8D9E5SsajzhsBetZRb2CYp0x2VH/nK9sL5j9IQ6bZ6GZAnunqElHNKV1tHTlYcvCyRlJpfiRZk++yjgZVA/BV6lSMnYJN1TXEHB548LmOk7XZoW9BA3UN5I3+as1rdhwEOj6Z48lUax2+rHISqVO6GoKykG7coLiSHDAgg9sIpfE/p48oRt2kayYxv7qL9E/slSkXHJ4yhiiTAB8nuAERlaR6QIAjfcwlzX2c6QI4/jdDV2w7GGtDJMSPPBn+UKsWhvq9W/w8TkIFzcl7CIIHHcxtI4QbetTLYfI8cT8lc5K/xAoutlmt1MJgtI4xx/2rMrklwEYAzsc/0obagc0kmIwI5yhW9HS8GcOBz5/2laQfsld/paA4gggZidogd0G6pPaA0HHM/VMVLYOc6HEwQcDaPPugVZcdTiIExxnEak66siZyjSkSCROJ9shWuLjGjT2g8fwVZrCWjUDiCAJEAd+4Sl4yXNM4yQJ/VMlS7B2wDmDDp9Q3ZsHGYzPsmi51RvDYGOfquOqAtwMjbHMyfsUtTug8FgEDyM9zlPH99AdsrVe1rWjUJHbuN1SoW1J7wJxsr1rYASBgZH3RLRo/L7Dc8bhWLYG1QvTpTnntG8KbTiIHYrlk0t+EHbEz/SquD8gn39kl/kRoHSeDPA791UifV3An3Q7r0gCdyrF+Q3iE66Azlm0mR5WrRte6paMGwWgxi6nF40JJTMmXI7o5TpgbIoUhcXUjGlRlbOqLiicA82UZhSrKqOx6qsehlrkZjks1yK0oWChtjkYOlJsKPTclkk1TCgdWhMztCXbazAPw+O3ErR3QdEY4Xn+Zwvj3Ho24st9i1w7iCQpbsAEDYzvvvkItV0FKmsAfVgHv7rnVTtmhO0Uu6cugZAiRwfkjXeGwe0QOMINen6mSYBMA7Z3Gfkm67A4wRjn5JvDTSRG+jMZUOzI7rrg0slrczBMbGJ37Izi0EtEbbcoVCkWkzOQfbPPj+FWmotj9oI5ggceDv4hKXFq0EEH5fui1Qwh0zABABkR9VUOY4CMwIxyQEzlroCQDqFAlrdM4IwOcjZdpVIdAAO+PYo9Vh0YnmOYk+N/9JGhb6ng5Ef8AI444T3si2hm8uCweimTnPG+Vl06pcPU2DMz89lqXNUiJMxg/aUvoDdLt8yZ/bwmUvMC0gNxUOoaTxDo5H9lFqBjfVjA2nv2SMzU7DJlWLmuEjV8zgeU60iNHDdammBAn098/ugU9EwTJjtj9Ea3t/Vj08528wNka8oNwTAdGMbzvKKfsjpaM013tBaM8Sd44gJipctDRqzwMGCUL/Ah+sQQBt7oz7eBMj/54HsmckBpA7mtoAwYicfZKvdqgzv8ATZFqVyZptiefbgIeIA58eN4TJX6F6A1HavSRkJq2sS6NQ2RunWEZj6rXp0oXV43EVKUjJky+kCt7UNRkRVLV04RUVSMzdgyu6VfQuEJwFYCi6ooQjDKM0JepZ1GeQuMqlUtNDrY+0lGa9IMrphlRCyUOMqJljkjTKYa5Bsg216uTISmtGY5V5IKSaCnQIs9U5SdZo1CcjnwVqByr+W3suTL/AIvemaI8gXqtDh/xjsUNp3JxtpTv5A3H+0tc0fSRtIWTkceeL9l0MikCrANyI1GMrrXyNjgZJ8bQs11IjTIcYG8ZKPTunEFgYWj/ANjucrNHHJW3ZY2vQa9brZpB9X7jJSVjZ/lapGTGRGE7WqGMtxxAn7e6pPo1A6jiDsmlJEi2lQOqdAMnMzGMTj57JJp15JAjgfdEfW/McGuwRuePYDgq7bem0zmfPwie6DXkFOuyhgj0S4neeODCUrNYCdTiYHHHcI1ydMkQ3YADae8+yDQsmgF7nQcE98HH98p1H2S0Wc1pA0jUHDftO0/yhupFrCzYudgj6xPy2RwXF4gCPHtnHPCFc1tMSIzA8nJ+WxTLW0CxO4eGwHZ+eRBz80WvUY2BODGe/wDClCoHlxMCOI3+fKHStajzluJkTv3GPdWRwSnqKA8iXZevckiG/JJBlRzxy2Ph/dalt0hwJJcc8Db5LQZYtAj2/RaYcDIukVPPE89bWVQu9QA+f7rStemhv9wPZaYoAFW0rq4OLGG2tmWeVyFwyF0NRi1VhayorpXCEWFzSmSAA/LU0Lle6a3crB6p+IWMGXAJq+wG2S3uovnlX8VmTDSR7rqHkg0fSOnddp1dpnsQtT/BbUbqAx3UUV8UpdlMm49CVTpkfCfkVUNLcFRRZsuOKVoujJsLTcih6iiyMtRYFGY5RRGyFg9dD1FEwAutd1qKINEOYXCxvZRRDxTDbK/4wgxiUA2O+ZUUVMuLil2hlkkvYszpZB3BHb+UOv0rUSD8PYkqKKlcHD5dDfNMWHQRy4n5pq26UGAAHHY5Cii0ri4kqoV5ZP2db0turVJn+8K9SwYd8+6iiaODGukK5y+yzKDRwoWgLqivSQtnChuKiiIpUlclRRMQmlVdA3XVFYkhWxO46g1q8/1b8TNYMk/QriijdBSPJdQ/EdSphvpHfcrHeS4ySSe5UUVdjE0qKKI0Q//Z',
         valor: 'R$ 2,50',
         opcoes: [
@@ -38,7 +38,7 @@ export const products: ListProducts[] = [
       },
       {
         id: 2,
-        nome: 'Completo',
+        nome: 'Cuscuz Completo',
         foto: 'https://img.itdg.com.br/tdg/images/recipes/000/061/325/325758/325758_original.jpg?mode=crop&width=710&height=400',
         valor: 'R$ 4,50',
         opcoes: [
@@ -64,11 +64,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 1,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Massa fina',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Massa grossa',
             valor: '2'
            }
         ]
@@ -80,11 +80,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 4,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Mista',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Queijo',
             valor: '2'
            }
         ]
@@ -96,11 +96,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 4,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Frango',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Franco com catupiry',
             valor: '2'
            }
         ]
@@ -117,11 +117,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 2,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Pequeno',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Grande',
             valor: '2'
            }
         ]
@@ -133,11 +133,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 4,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Sem gás',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Com gás',
             valor: '2'
            }
         ]
@@ -149,11 +149,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 4,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Acerola',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Maracuja',
             valor: '2'
            }
         ]
@@ -165,11 +165,11 @@ export const products: ListProducts[] = [
         valor: 'R$ 4,50',
          opcoes: [
           {
-            tipo: 'Milho',
+            tipo: 'Coca',
             valor: '1'
            },
            {
-            tipo: 'Arroz',
+            tipo: 'Uva',
             valor: '2'
            }
         ]

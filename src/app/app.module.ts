@@ -16,6 +16,7 @@ import { ListComponent } from './shared/components/list/list.component';
 import { ItemComponent } from './shared/components/list/item/item.component';
 import { DetailsProductComponent } from './modules/details-product/details-product.component';
 import { DetailsComponent } from './shared/components/details/details.component';
+import { AddProductComponent } from './shared/components/details/add-product/add-product.component';
 
 
 
@@ -33,7 +34,8 @@ import { DetailsComponent } from './shared/components/details/details.component'
     ListComponent,
     ItemComponent,
     DetailsProductComponent,
-    DetailsComponent
+    DetailsComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
