@@ -1,26 +1,26 @@
 <div class="details">
-  <div class="details__container">
-    <img [src]="productDetail[0].foto" [alt]="productDetail[0].nome">
-    <div class="details__left">
-      <h6>{{productDetail[0].nome}}</h6>
-      <p>{{productDetail[0].valor}}</p>
+    <div class="details__container">
+      <img [src]="productDetail[0].foto" [alt]="productDetail[0].nome">
+      <div class="details__left">
+        <h6>{{productDetail[0].nome}}</h6>
+        <p>{{productDetail[0].valor}}</p>
+      </div>
     </div>
-  </div>
-  <div class="details__options">
-    <h6>Opções</h6>
-    <p>Escolha dentre as opções de massas abaixo.</p>
-    <mai-radiobtn
-      [background]='true'
-      [data]="data"
-    >
-    </mai-radiobtn>
-  </div>
-  <div class="details__obs">
-    <h6>Observações</h6>
-    <mai-input
-      [isDefault]='false'
-      placeholder="Observações"
-    ><input type="text" /></mai-input>
-  </div>
-  <app-add-product></app-add-product>
+    <div class="details__options">
+      <h6>Opções</h6>
+      <p>Escolha dentre as opções de massas abaixo.</p>
+      <mai-radiobtn
+        [background]='true'
+        [data]="data"
+      >
+      </mai-radiobtn>
+    </div>
+    <div class="details__obs">
+      <h6>Observações</h6>
+      <mai-input
+        [isDefault]='false'
+        placeholder="Observações"
+      ><input type="text" /></mai-input>
+    </div>
+    <app-add-product></app-add-product>
 </div>
