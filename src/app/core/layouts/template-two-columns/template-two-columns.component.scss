@@ -35,6 +35,14 @@ div.content{
       max-height: 100vh;
       overflow-y: auto;
 
+      button {
+        margin-left: 8px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        border: none;
+        display: none;
+      }
+
 
       mai-avatar{
         align-self: flex-end;
@@ -69,11 +77,17 @@ div.content{
       overflow-y: initial;
       padding: 0 16px 16px;
 
-      #header {
-        h1 {
-          background: red;
-        }
-      };
+      mai-avatar{
+        display: none;
+      }
+
+      button{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
     }
   }
 }

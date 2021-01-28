@@ -20,6 +20,9 @@
 
     <div class="area-two">
       <mai-avatar [photo]="foto"></mai-avatar>
+      <button tyoe="button" (click)="handleBackPage()">
+        <img src="../../../../assets/icons/arrow-left.svg" alt=""/>
+      </button>
       <div>
         <mai-header [label]="headerRight"></mai-header>
         <ng-content select=".painel-main"></ng-content>
