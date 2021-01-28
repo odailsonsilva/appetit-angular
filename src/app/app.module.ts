@@ -14,6 +14,7 @@ import { StoreComponent } from './shared/components/store/store.component';
 import { ContainerProgressBarComponent } from './shared/components/container-progress-bar/container-progress-bar.component';
 import { ListComponent } from './shared/components/list/list.component';
 import { ItemComponent } from './shared/components/list/item/item.component';
+import { DetailsProductComponent } from './modules/details-product/details-product.component';
 
 
 
@@ -29,7 +30,8 @@ import { ItemComponent } from './shared/components/list/item/item.component';
     StoreComponent,
     ContainerProgressBarComponent,
     ListComponent,
-    ItemComponent
+    ItemComponent,
+    DetailsProductComponent
   ],
   imports: [
     BrowserModule,

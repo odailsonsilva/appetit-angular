@@ -1,7 +1,7 @@
 <div class="list" *ngFor="let type of listProducts">
   <h6>{{type.type}}</h6>
   <ul>
-    <li class="list__item" *ngFor="let product of type.produtos" >
+    <li class="list__item" *ngFor="let product of type.produtos" (click)="handleNavigateDetails(product.id)">
       <div class="list__item__block">
         <img [src]="product.foto" [alt]="product.nome"/>
         <h6>{{product.nome}}</h6>

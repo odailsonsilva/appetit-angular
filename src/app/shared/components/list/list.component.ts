@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ListProducts, products } from './list';
 
 @Component({
@@ -10,9 +11,13 @@ export class ListComponent implements OnInit {
 
   listProducts: ListProducts[] = products
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+
+  handleNavigateDetails(id: number) {
+    this.router.navigate(['novo-pedido/detalhes-do-prato', id])
+  }
 }

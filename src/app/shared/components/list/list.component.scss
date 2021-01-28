@@ -18,6 +18,7 @@ div.list{
       align-items: center;
       justify-content: space-between;
       padding: 24px 0;
+      cursor: pointer;
 
       & + li {
         border-top: 1px solid rgba(0, 0, 0, 0.08);
