@@ -12,6 +12,7 @@
       <mai-radiobtn
         [background]='true'
         [data]="data"
+        (clicked)="ativedADDProduct()"
       >
       </mai-radiobtn>
     </div>
@@ -22,5 +23,5 @@
         placeholder="Observações"
       ><input type="text" /></mai-input>
     </div>
-    <app-add-product></app-add-product>
+    <app-add-product [showADDProduct]="showADDProduct"></app-add-product>
 </div>

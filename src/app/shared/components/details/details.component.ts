@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   @Input() productDetail: any = []
-
+  showADDProduct: boolean = false
   data: any = []
 
   constructor() { }
@@ -19,4 +19,8 @@ export class DetailsComponent implements OnInit {
     ))
   }
 
+
+  ativedADDProduct(){
+    this.showADDProduct = true
+  }
 }

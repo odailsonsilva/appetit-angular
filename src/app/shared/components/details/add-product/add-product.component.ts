@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-product',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
+@Input() showADDProduct: boolean = false
   quantityItem: number = 1;
   price: number = 3.25;
   total: string = 3.25.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
