@@ -1,6 +1,11 @@
 div.details{
   width: 100%;
   position: relative;
+  height: calc(100vh - 276px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.details__container{
@@ -33,5 +38,24 @@ div.details__options{
 div.details__obs {
   > h6{
     margin: 24px 0;
+  }
+
+  margin-bottom: 100px;
+}
+
+
+div.details__stick{
+  background: red;
+  height: 100%;
+}
+
+
+@media (max-width: 768px){
+  div.details{
+    height: calc(100vh - 76px);
+  }
+
+  div.details__obs {
+    margin-bottom: 0px;
   }
 }
