@@ -1,4 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+
+import { CartModel, ProductModel } from '../../../../shared/store/store.model';
+import { ADD } from '../../../../shared/store/store.actions'
 
 @Component({
   selector: 'app-add-product',
@@ -7,20 +13,29 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
-@Input() showADDProduct: boolean = false
+  @Input() showADDProduct: boolean = false
+  @Input() product: any = []
   quantityItem: number = 1;
-  price: number = 3.25;
-  total: string = 3.25.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+  price: number = 0;
+  total: string | number = 0
+  totalNFormatado: number = 0
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private store: Store<CartModel>
+  ) {}
 
   ngOnInit(): void {
+    //inicializando valores
+    this.price = this.product[0].valorN
+    this.total = this.product[0].valorN.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   }
 
   removeItem() {
     if(this.quantityItem !== 1){
       this.quantityItem -= 1
       let som = this.price * this.quantityItem
+      this.totalNFormatado = som
       this.total = som.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
     }
   }
@@ -29,6 +44,22 @@ export class AddProductComponent implements OnInit {
     this.quantityItem += 1
 
     let som = this.price * this.quantityItem
+    this.totalNFormatado = som
     this.total = som.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+  }
+
+  AddProductStore() {
+    //fora o valor e as observacoes
+    const dataStore: any = {
+      _id: this.product[0].id,
+      foto: this.product[0].foto,
+      nome: this.product[0].nome,
+      valorUnitario: this.product[0].valor,
+      total: this.totalNFormatado
+    }
+
+    this.store.dispatch(ADD(dataStore))
+
+    this.router.navigate(['novo-pedido/selecionar-prato'])
   }
 }

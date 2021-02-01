@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {  StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { DetailsProductComponent } from './modules/details-product/details-produ
 import { DetailsComponent } from './shared/components/details/details.component';
 import { AddProductComponent } from './shared/components/details/add-product/add-product.component';
 import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.component';
+import { cartReducer } from './shared/store/store.reducer';
 
 
 
@@ -42,7 +44,10 @@ import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ShareComponentModule
+    ShareComponentModule,
+    StoreModule.forRoot({
+      cart: cartReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
