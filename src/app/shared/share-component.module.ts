@@ -12,7 +12,8 @@ import {
   SearchbarModule,
   SideNavModule,
   TopNavModule,
-  RadiobtnModule
+  RadiobtnModule,
+  InfobarModule
 } from 'dls';
 
 @NgModule({
@@ -29,7 +30,8 @@ import {
     SearchbarModule,
     AvatarModule,
     ProgressBarModule,
-    RadiobtnModule
+    RadiobtnModule,
+    InfobarModule
   ],
   exports: [
     BtnModule,
@@ -42,7 +44,8 @@ import {
     SearchbarModule,
     AvatarModule,
     ProgressBarModule,
-    RadiobtnModule
+    RadiobtnModule,
+    InfobarModule
   ]
 })
 export class ShareComponentModule { }

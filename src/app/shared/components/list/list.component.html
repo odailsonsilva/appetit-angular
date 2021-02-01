@@ -3,7 +3,16 @@
   <ul>
     <li class="list__item" *ngFor="let product of type.produtos" (click)="handleNavigateDetails(product.id)">
       <div class="list__item__block">
-        <img [src]="product.foto" [alt]="product.nome"/>
+        <img
+          *ngIf="handleComparedIDs(product.id)"
+          [src]="product.foto"
+          [alt]="product.nome"
+        />
+        <img
+          *ngIf="!handleComparedIDs(product.id)"
+          src="../../../../assets/icons/selected.svg"
+          [alt]="product.nome"
+        />
         <h6>{{product.nome}}</h6>
       </div>
       <p>{{product.valor}}</p>

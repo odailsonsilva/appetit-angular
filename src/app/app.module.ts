@@ -20,6 +20,7 @@ import { DetailsComponent } from './shared/components/details/details.component'
 import { AddProductComponent } from './shared/components/details/add-product/add-product.component';
 import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.component';
 import { cartReducer } from './shared/store/store.reducer';
+import { CheckoutStoreComponent } from './shared/components/checkout-store/checkout-store.component';
 
 
 
@@ -39,7 +40,8 @@ import { cartReducer } from './shared/store/store.reducer';
     DetailsProductComponent,
     DetailsComponent,
     AddProductComponent,
-    FeedbackOrderComponent
+    FeedbackOrderComponent,
+    CheckoutStoreComponent
   ],
   imports: [
     BrowserModule,

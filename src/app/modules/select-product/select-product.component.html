@@ -17,5 +17,11 @@
       </header>
 
       <ap-list></ap-list>
+
+      <app-checkout-store
+        *ngIf="totalStore !== 0"
+        [contentLeft]="totalFormat"
+        [path]="path"
+      ></app-checkout-store>
     </div>
 </ap-template-two-columns>

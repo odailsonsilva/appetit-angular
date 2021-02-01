@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store'
 
 import { ProductModel, CartModel } from './store.model'
-import { ADD } from './store.actions'
+import { ADD, SHOW } from './store.actions'
 
 export const cart = new CartModel()
 
@@ -15,23 +15,23 @@ export const cartReducer = createReducer(
           action
         ]
       }
-      // state.totalFinal = calculateTotal(state.products)
-      console.log(state)
+      state.totalFinal = calculateTotal(state.products)
       return state
     }
-  )
+  ),
+  on(SHOW, state => (state))
 )
 
 
-//funcao para calcular total
-// function calculateTotal(products: ProductModel[]): number {
-//   let total: number = 0;
-//   products.map(product => {
-//     total += product.total
-//   })
+// funcao para calcular total
+function calculateTotal(products: ProductModel[]): number {
+  let total: number = 0;
+  products.map(product => {
+    total += product.total
+  })
 
-//   return total;
-// }
+  return total;
+}
 
 
 

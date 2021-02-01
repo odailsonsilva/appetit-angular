@@ -10,3 +10,7 @@ export const ADD = createAction(
   ActionTypes.ADD,
   props<{payload: any}>()
 )
+
+export const SHOW = createAction(
+  ActionTypes.SHOW
+)

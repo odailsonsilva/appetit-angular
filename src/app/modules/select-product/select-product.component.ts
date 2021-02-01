@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListProducts, products } from '../../shared/components/list/list';
 import { Observable } from 'rxjs'
-import { Store, select, Action } from '@ngrx/store'
+import { Store, select } from '@ngrx/store'
 
 import { CartModel } from '../../shared/store/store.model';
 
@@ -15,12 +15,24 @@ export class SelectProductComponent implements OnInit {
   cart$: Observable<any>
   products: ListProducts[] = products
 
+  totalStore: number = 0
+  totalFormat: string = ''
+  path: string = 'novo-pedido/selecionar-cliente'
+
 
   constructor(private store: Store<CartModel[] | any>) {
-    this.cart$ = this.store.pipe(select('cartReducer'))
+    this.cart$ = this.store.select('cart')
   }
 
   ngOnInit(): void {
+    //captura dados do observable (Store)
+    this.cart$.subscribe(res => {
+      this.totalStore = res.totalFinal
+    })
+
+    this.totalFormat = this.totalStore.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+    this.totalFormat = `Total: ${this.totalFormat}`
   }
 
 }

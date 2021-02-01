@@ -28,6 +28,7 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
     //inicializando valores
     this.price = this.product[0].valorN
+    this.totalNFormatado = this.product[0].valorN
     this.total = this.product[0].valorN.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   }
 
@@ -50,11 +51,12 @@ export class AddProductComponent implements OnInit {
 
   AddProductStore() {
     //fora o valor e as observacoes
+
     const dataStore: any = {
       _id: this.product[0].id,
       foto: this.product[0].foto,
       nome: this.product[0].nome,
-      valorUnitario: this.product[0].valor,
+      valorUnitario: parseFloat(this.product[0].valorN),
       total: this.totalNFormatado
     }
 
