@@ -1,0 +1,27 @@
+<ap-template-two-columns
+  headerLeft="Novo pedido"
+  headerRight="Informações para o pedido"
+>
+    <div class="cart">
+     <ap-store></ap-store>
+    </div>
+    <div class="painel-main">
+      <header>
+        <p>Preencha as informações abaixo para concluir esta venda.</p>
+        <ap-container-progress-bar></ap-container-progress-bar>
+        <p>O que você está vendendo?</p>
+        <mai-searchbar
+          placeholder='Procure o produto aqui...'
+        ><input type="text"
+        /></mai-searchbar>
+      </header>
+
+      <p>lista de clientes</p>
+
+      <app-checkout-store
+        *ngIf=""
+        [contentLeft]="clientSelected"
+        [path]="path"
+      ></app-checkout-store>
+    </div>
+</ap-template-two-columns>

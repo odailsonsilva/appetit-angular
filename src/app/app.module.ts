@@ -21,6 +21,7 @@ import { AddProductComponent } from './shared/components/details/add-product/add
 import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.component';
 import { cartReducer } from './shared/store/store.reducer';
 import { CheckoutStoreComponent } from './shared/components/checkout-store/checkout-store.component';
+import { SelectClientComponent } from './modules/select-client/select-client.component';
 
 
 
@@ -41,7 +42,8 @@ import { CheckoutStoreComponent } from './shared/components/checkout-store/check
     DetailsComponent,
     AddProductComponent,
     FeedbackOrderComponent,
-    CheckoutStoreComponent
+    CheckoutStoreComponent,
+    SelectClientComponent
   ],
   imports: [
     BrowserModule,

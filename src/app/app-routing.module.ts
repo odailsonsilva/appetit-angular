@@ -4,6 +4,7 @@ import { DetailsProductComponent } from './modules/details-product/details-produ
 import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.component';
 import { OrderUserComponent } from './modules/order-user/order-user.component';
 import { OrdersListComponent } from './modules/orders-list/orders-list.component';
+import { SelectClientComponent } from './modules/select-client/select-client.component';
 import { SelectProductComponent } from './modules/select-product/select-product.component';
 
 import { SignInComponent } from './modules/sign-in/sign-in.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'pedidos/:id', component: OrderUserComponent },
   { path: 'novo-pedido/selecionar-prato', component: SelectProductComponent },
   { path: 'novo-pedido/detalhes-do-prato/:prato', component: DetailsProductComponent },
+  { path: 'novo-pedido/selecionar-cliente', component: SelectClientComponent },
   { path: 'finalizado-pedido', component: FeedbackOrderComponent },
 ];
 
