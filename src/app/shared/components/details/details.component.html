@@ -25,9 +25,13 @@
         <mai-input
           [isDefault]='false'
           placeholder="Observações"
-        ><input type="text" /></mai-input>
+        ><input type="text" (keyup)="handleInput($event)"/></mai-input>
       </div>
     </div>
 
 </div>
-<app-add-product [showADDProduct]="showADDProduct" [product]='productDetail'></app-add-product>
+<app-add-product
+    [showADDProduct]="showADDProduct"
+    [product]='productDetail'
+    [observations]="inputValue"
+  ></app-add-product>

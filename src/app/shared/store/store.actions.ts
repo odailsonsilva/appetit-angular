@@ -1,16 +1,23 @@
 import { createAction, props } from '@ngrx/store';
-import { ProductModel } from './store.model';
+import { ClientStoreModel, ProductInterface } from './store.model';
 
 export enum ActionTypes {
   ADD = 'ADD',
-  SHOW = 'SHOW'
+  ADD_CLIENT = 'ADD_CLIENT',
+  REMOTE_CLIENT = 'REMOTE_CLIENT'
 }
 
 export const ADD = createAction(
   ActionTypes.ADD,
-  props<{payload: any}>()
+  props<{id: ProductInterface}>()
 )
 
-export const SHOW = createAction(
-  ActionTypes.SHOW
+export const ADD_CLIENT = createAction(
+  ActionTypes.ADD_CLIENT,
+  props<{payload: any, id: number}>()
+)
+
+export const REMOTE_CLIENT = createAction(
+  ActionTypes.REMOTE_CLIENT,
+  props<{id: ClientStoreModel}>()
 )

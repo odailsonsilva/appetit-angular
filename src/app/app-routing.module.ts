@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DetailsProductComponent } from './modules/details-product/details-product.component';
 import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.component';
+import { FinishOrderComponent } from './modules/finish-order/finish-order.component';
 import { OrderUserComponent } from './modules/order-user/order-user.component';
 import { OrdersListComponent } from './modules/orders-list/orders-list.component';
 import { SelectClientComponent } from './modules/select-client/select-client.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'novo-pedido/selecionar-prato', component: SelectProductComponent },
   { path: 'novo-pedido/detalhes-do-prato/:prato', component: DetailsProductComponent },
   { path: 'novo-pedido/selecionar-cliente', component: SelectClientComponent },
+  { path: 'novo-pedido/finalizar', component: FinishOrderComponent },
   { path: 'finalizado-pedido', component: FeedbackOrderComponent },
 ];
 

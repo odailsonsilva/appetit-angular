@@ -10,5 +10,20 @@ export class ProductModel {
 
 export class CartModel {
   public products: any[] = []
+  public clients: any[] =[]
   public totalFinal: number = 0
+}
+
+
+export interface ClientStoreModel {
+  id: number;
+}
+
+
+export interface ProductInterface {
+  _id: string,
+  nome: string,
+  foto: string,
+  valorUnitario: number,
+  total: number
 }

@@ -1,0 +1,19 @@
+<div class="list" *ngFor="let list of listClients">
+  <ul>
+    <li class="list__item" *ngFor="let client of list.clients" (click)="handleSeletedClient(client)">
+      <div class="list__item__block">
+        <img
+          *ngIf="handleComparedIDs(client.id)"
+          [src]="client.foto"
+          [alt]="client.nome"
+        />
+        <img
+          *ngIf="!handleComparedIDs(client.id)"
+          src="../../../../assets/icons/selected.svg"
+          [alt]="client.nome"
+        />
+        <h6>{{client.nome}}</h6>
+      </div>
+    </li>
+  </ul>
+</div>

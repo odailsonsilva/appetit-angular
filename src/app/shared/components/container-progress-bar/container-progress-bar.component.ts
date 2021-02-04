@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ap-container-progress-bar',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container-progress-bar.component.scss']
 })
 export class ContainerProgressBarComponent implements OnInit {
+
+  @Input() progress: any
+  @Input() passo: any
 
   constructor() { }
 

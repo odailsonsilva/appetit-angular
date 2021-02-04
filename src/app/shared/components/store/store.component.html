@@ -1,4 +1,41 @@
-<div class="store-empty">
+<div class="store-empty" *ngIf="!activedStore">
   <img src="../../../../assets/icons/cart-empty.svg" alt="Carrinho vazio"/>
   <p>Acompanhe aqui um resumo desta venda.</p>
+</div>
+
+<div class="store" *ngIf="activedStore">
+  <div class="store__products">
+    <h4>Produtos</h4>
+    <ul class="list">
+      <li *ngFor="let product of productsSelected">
+        <div class="list__left">
+          <div>
+            <img [src]="product.foto" [alt]="product.nome">
+            <h6>{{product.nome}}</h6>
+          </div>
+          <p>{{product.total | currency : 'R$ '}}</p>
+        </div>
+        <p>{{product.description}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="store__products" *ngIf="clientsSelected.length > 0">
+    <h4>Clientes</h4>
+    <ul class="list">
+      <li *ngFor="let product of clientsSelected">
+        <div class="list__left">
+          <div>
+            <img [src]="product.foto" [alt]="product.nome">
+            <h6>{{product.nome}}</h6>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="total">
+    <h4>Total</h4>
+    <p>{{totalFormat}}</p>
+  </div>
 </div>

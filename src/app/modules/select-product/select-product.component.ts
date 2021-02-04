@@ -15,6 +15,9 @@ export class SelectProductComponent implements OnInit {
   cart$: Observable<any>
   products: ListProducts[] = products
 
+  passo = '1'
+  progresso = 33
+
   totalStore: number = 0
   totalFormat: string = ''
   path: string = 'novo-pedido/selecionar-cliente'

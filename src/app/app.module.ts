@@ -22,6 +22,8 @@ import { FeedbackOrderComponent } from './modules/feedback-order/feedback-order.
 import { cartReducer } from './shared/store/store.reducer';
 import { CheckoutStoreComponent } from './shared/components/checkout-store/checkout-store.component';
 import { SelectClientComponent } from './modules/select-client/select-client.component';
+import { ListClientComponent } from './shared/components/list-client/list.component';
+import { FinishOrderComponent } from './modules/finish-order/finish-order.component';
 
 
 
@@ -43,7 +45,10 @@ import { SelectClientComponent } from './modules/select-client/select-client.com
     AddProductComponent,
     FeedbackOrderComponent,
     CheckoutStoreComponent,
-    SelectClientComponent
+    SelectClientComponent,
+    ListClientComponent,
+    AddProductComponent,
+    FinishOrderComponent
   ],
   imports: [
     BrowserModule,

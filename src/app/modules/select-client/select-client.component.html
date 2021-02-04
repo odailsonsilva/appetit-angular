@@ -8,19 +8,22 @@
     <div class="painel-main">
       <header>
         <p>Preencha as informações abaixo para concluir esta venda.</p>
-        <ap-container-progress-bar></ap-container-progress-bar>
-        <p>O que você está vendendo?</p>
+        <ap-container-progress-bar
+          [progress]="progresso"
+          [passo]="passo"
+        ></ap-container-progress-bar>
+        <p>Para quem você está vendendo?</p>
         <mai-searchbar
           placeholder='Procure o produto aqui...'
         ><input type="text"
         /></mai-searchbar>
       </header>
 
-      <p>lista de clientes</p>
+      <ap-list-client></ap-list-client>
 
       <app-checkout-store
-        *ngIf=""
-        [contentLeft]="clientSelected"
+        *ngIf="clientsSelected.length > 0"
+        [contentLeft]="totalClientSelected"
         [path]="path"
       ></app-checkout-store>
     </div>

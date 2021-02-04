@@ -12,19 +12,12 @@
           [progress]="progresso"
           [passo]="passo"
         ></ap-container-progress-bar>
-        <p>O que você está vendendo?</p>
-        <mai-searchbar
-          placeholder='Procure o produto aqui...'
-        ><input type="text"
-        /></mai-searchbar>
+        <p>Qual o status do pagamento?</p>
+        <mai-radiobtn
+          [background]='true'
+          [data]="data"
+        >
+        </mai-radiobtn>
       </header>
-
-      <ap-list></ap-list>
-
-      <app-checkout-store
-        *ngIf="totalStore !== 0"
-        [contentLeft]="totalFormat"
-        [path]="path"
-      ></app-checkout-store>
     </div>
 </ap-template-two-columns>

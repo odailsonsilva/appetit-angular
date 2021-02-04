@@ -12,18 +12,26 @@ import { ADD } from '../../../../shared/store/store.actions'
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
+  cart$: Observable<any>
 
   @Input() showADDProduct: boolean = false
   @Input() product: any = []
+  @Input() observations = ''
   quantityItem: number = 1;
   price: number = 0;
   total: string | number = 0
   totalNFormatado: number = 0
+  compareProducts: any[] = []
 
   constructor(
     private router: Router,
-    private store: Store<CartModel>
-  ) {}
+    private store: Store<CartModel | any>
+  )
+  {
+
+    this.cart$ = this.store.select('cart')
+
+  }
 
   ngOnInit(): void {
     //inicializando valores
@@ -51,13 +59,14 @@ export class AddProductComponent implements OnInit {
 
   AddProductStore() {
     //fora o valor e as observacoes
-
     const dataStore: any = {
       _id: this.product[0].id,
       foto: this.product[0].foto,
       nome: this.product[0].nome,
       valorUnitario: parseFloat(this.product[0].valorN),
-      total: this.totalNFormatado
+      total: this.totalNFormatado,
+      description: this.observations,
+      quantidade: this.quantityItem
     }
 
     this.store.dispatch(ADD(dataStore))

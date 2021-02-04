@@ -1,13 +1,26 @@
 import { createReducer, on } from '@ngrx/store'
 
 import { ProductModel, CartModel } from './store.model'
-import { ADD, SHOW } from './store.actions'
+import { ADD, ADD_CLIENT, REMOTE_CLIENT } from './store.actions'
 
 export const cart = new CartModel()
 
 export const cartReducer = createReducer(
   cart,
   on(ADD, (state, action) => {
+      // const filter = state.products.filter(product => product._id === action._id)
+      // console.log(filter)
+      // if(filter.length > 0){
+      //   const test = state.products.map(product => {
+      //     if(product._id === action._id){
+      //       return {...product, total: product.total + action.total, quantidade: product.quantidade + action.quantidade}
+      //     }else{
+      //       return product
+      //     }
+      //   })
+      // }else{
+
+      // }
       state = {
         ...state,
         products: [
@@ -15,13 +28,34 @@ export const cartReducer = createReducer(
           action
         ]
       }
+
       state.totalFinal = calculateTotal(state.products)
       return state
     }
   ),
-  on(SHOW, state => (state))
+  on(ADD_CLIENT, (state, action) => {
+    state = {
+      ...state,
+      clients: [
+        ...state.clients,
+        action
+      ]
+    }
+    return state
+  },
+  ),
+  on(REMOTE_CLIENT, (state, action) => {
+    const filter = state.clients.filter(client => client.id !== action.id)
+    state = {
+      ...state,
+      clients: [
+        ...filter
+      ]
+    }
+    return state
+    },
+  ),
 )
-
 
 // funcao para calcular total
 function calculateTotal(products: ProductModel[]): number {
@@ -35,34 +69,3 @@ function calculateTotal(products: ProductModel[]): number {
 
 
 
-
-
-
-
-
-
-
-
-
-// import { Action } from '@ngrx/store';
-
-// const INITIAL_STATE = {
-//   counter: 0
-// }
-
-// const reducer = (state = INITIAL_STATE, action: Action) => {
-//   switch(action.type){
-//     case 'AddProduct':
-//       return {
-//         ...state,
-//         counter: state.counter + 1
-//       }
-//     case 'ShowProductStore':
-//       return {
-//         ...state,
-//         counter: state.counter + 1
-//       };
-//     default:
-//       return state
-//   }
-// }

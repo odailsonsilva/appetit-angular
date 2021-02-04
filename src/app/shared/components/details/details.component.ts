@@ -10,6 +10,7 @@ export class DetailsComponent implements OnInit {
   @Input() productDetail: any = []
   showADDProduct: boolean = false
   data: any = []
+  inputValue = ''
 
   constructor() { }
 
@@ -19,8 +20,11 @@ export class DetailsComponent implements OnInit {
     ))
   }
 
-
   ativedADDProduct(){
     this.showADDProduct = true
+  }
+
+  handleInput(event: any) {
+    this.inputValue = event.target.value
   }
 }
