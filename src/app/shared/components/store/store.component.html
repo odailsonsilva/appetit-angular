@@ -11,7 +11,7 @@
         <div class="list__left">
           <div>
             <img [src]="product.foto" [alt]="product.nome">
-            <h6>{{product.nome}}</h6>
+            <h6>{{product.quantidade}}x{{product.nome}}</h6>
           </div>
           <p>{{product.total | currency : 'R$ '}}</p>
         </div>

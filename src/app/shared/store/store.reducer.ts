@@ -1,36 +1,23 @@
 import { createReducer, on } from '@ngrx/store'
 
 import { ProductModel, CartModel } from './store.model'
-import { ADD, ADD_CLIENT, REMOTE_CLIENT } from './store.actions'
+import { ADD, ADD_CLIENT, REMOTE_CLIENT, CLEAR_STORE } from './store.actions'
 
 export const cart = new CartModel()
 
 export const cartReducer = createReducer(
   cart,
   on(ADD, (state, action) => {
-      // const filter = state.products.filter(product => product._id === action._id)
-      // console.log(filter)
-      // if(filter.length > 0){
-      //   const test = state.products.map(product => {
-      //     if(product._id === action._id){
-      //       return {...product, total: product.total + action.total, quantidade: product.quantidade + action.quantidade}
-      //     }else{
-      //       return product
-      //     }
-      //   })
-      // }else{
+    state = {
+      ...state,
+      products: [
+        ...state.products,
+        action
+      ]
+    }
 
-      // }
-      state = {
-        ...state,
-        products: [
-          ...state.products,
-          action
-        ]
-      }
-
-      state.totalFinal = calculateTotal(state.products)
-      return state
+    state.totalFinal = calculateTotal(state.products)
+    return state
     }
   ),
   on(ADD_CLIENT, (state, action) => {
@@ -55,6 +42,14 @@ export const cartReducer = createReducer(
     return state
     },
   ),
+  on(CLEAR_STORE, state => {
+    state = {
+      products: [],
+      clients: [],
+      totalFinal: 0
+    }
+    return state
+  })
 )
 
 // funcao para calcular total
