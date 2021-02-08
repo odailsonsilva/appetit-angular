@@ -27,11 +27,11 @@ h1,h2,h3,h4,h5,h6,button {
 }
 h1 {
     @include text-setting('h1');
-    color: color('bw', 'black', '88');
+    color: color('bw', 'black', '88') !important;
 }
 h2 {
     @include text-setting('h2');
-    color: color('bw', 'black', '88');
+    color: color('bw', 'black', '88') !important;
 }
 h3 {
     @include text-setting('h3');
@@ -44,7 +44,12 @@ h4 {
 }
 h6 {
   @include text-setting('h6');
-  color: color('bw', 'black', '88');
+  color: color('bw', 'black', '88') !important;
+}
+h6 {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  font-weight: 600 !important;
 }
 // MAKE testar se eu passo parametro true detalhando o que é
 button {

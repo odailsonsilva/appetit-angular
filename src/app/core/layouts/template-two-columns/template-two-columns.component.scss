@@ -13,6 +13,13 @@ div.content{
       height: 100%;
       background: #FFFFFF;
 
+      position: sticky;
+      top: 0px;
+      right: 0px;
+      height: 100vh;
+
+      overflow-y: auto;
+
       button {
         margin-left: 8px;
         margin-bottom: 10px;

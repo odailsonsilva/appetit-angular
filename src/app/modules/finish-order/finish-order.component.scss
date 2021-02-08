@@ -18,3 +18,76 @@ div.painel-main header{
   }
 }
 
+div.datapicker{
+  margin-top: 24px;
+
+
+
+  mat-form-field{
+    width: 100%;
+
+  }
+}
+
+div.field-datepicker{
+  position: relative;
+
+  div.picker{
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 20;
+  }
+}
+
+
+div.btn-finish{
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn__canc {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.btn__apply{
+  margin-left: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  color: #FF8822;
+}
+
+//calendario
+// ::ng-deep
+
+::ng-deep .mat-calendar-body-selected{
+  background: #FF8822;
+}
+
+::ng-deep thead tr:nth-child(2) {
+  display: none;
+}
+
+
+::ng-deep tbody tr:nth-child(1) {
+  display: none;
+}
+
+::ng-deep tbody tr:last-child {
+  margin-bottom: 26px;
+}
+
+mat-datepicker-toggle {
+  color: #FF8822 !important;
+}

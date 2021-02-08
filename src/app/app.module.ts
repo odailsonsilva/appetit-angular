@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {  StoreModule } from '@ngrx/store';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +28,7 @@ import { CheckoutStoreComponent } from './shared/components/checkout-store/check
 import { SelectClientComponent } from './modules/select-client/select-client.component';
 import { ListClientComponent } from './shared/components/list-client/list.component';
 import { FinishOrderComponent } from './modules/finish-order/finish-order.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -54,11 +59,16 @@ import { FinishOrderComponent } from './modules/finish-order/finish-order.compon
     BrowserModule,
     AppRoutingModule,
     ShareComponentModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
     StoreModule.forRoot({
       cart: cartReducer
-    })
+    }),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

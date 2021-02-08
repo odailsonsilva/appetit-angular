@@ -1,0 +1,19 @@
+<div class="container-picker">
+  <header>
+    <h6>{{YearTop}}</h6>
+    <h3>{{Month}}</h3>
+  </header>
+  <div class="btns-picker" >
+    <button type="button" (click)="previousClicked('month')">
+      <img src="../../../../assets/icons/arrow-right-app.svg" alt="">
+    </button>
+
+    <h6>
+      {{periodLabel}}
+    </h6>
+
+    <button type="button" (click)="nextClicked('month')">
+      <img src="../../../../assets/icons/arrow-left-app.svg" alt="">
+    </button>
+  </div>
+</div>

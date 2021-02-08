@@ -5,6 +5,7 @@
     <div class="cart">
      <ap-store></ap-store>
     </div>
+
     <div class="painel-main">
       <header>
         <p>Preencha as informações abaixo para concluir esta venda.</p>
@@ -18,6 +19,30 @@
           [data]="data"
         >
         </mai-radiobtn>
+
+       <div class="datapicker">
+        <h6>Em qual data foi realizado?</h6>
+
+        <div class="field-datepicker">
+          <mai-input placeholder="Data do pedido">
+              <input matInput type="text" [matDatepicker]="appetit_color">
+          </mai-input>
+          <div class="picker">
+            <mat-datepicker-toggle matSuffix [for]="appetit_color"></mat-datepicker-toggle>
+            <mat-datepicker [calendarHeaderComponent]="headerDate" #appetit_color>
+              <mat-datepicker-actions class="picker__btns">
+                <button matDatepickerCancel class="btn__canc">CANCELAR</button>
+                <button  matDatepickerApply class="btn__apply">ESCOLHER</button>
+              </mat-datepicker-actions>
+            </mat-datepicker>
+          </div>
+        </div>
+
+     </div>
+
+      <div class="btn-finish">
+        <mai-btn label="Salvar" (click)="handleRedirectFeedback()"></mai-btn>
+      </div>
       </header>
     </div>
 </ap-template-two-columns>

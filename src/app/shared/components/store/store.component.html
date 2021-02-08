@@ -23,7 +23,7 @@
   <div class="store__products" *ngIf="clientsSelected.length > 0">
     <h4>Clientes</h4>
     <ul class="list">
-      <li *ngFor="let product of clientsSelected">
+      <li *ngFor="let product of clientsSelected" class="l-client">
         <div class="list__left">
           <div>
             <img [src]="product.foto" [alt]="product.nome">
